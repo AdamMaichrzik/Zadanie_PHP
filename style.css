@@ -16,14 +16,19 @@ a:hover {
   text-decoration: none;
 }
 
+.row-height-margin{
+    height: 233px;
+    margin-top: 5%;
+    padding: 3%;
+}
+
 .navbar-items {
   padding: 5px;
 }
 
 .h1-header-div {
-  background-color: gold;
-  height: 233px;
+  
 }
 .h1-header-text {
-  padding-top: 89px;
+  padding-top: 34px;
 }
