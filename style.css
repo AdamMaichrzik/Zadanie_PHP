@@ -22,6 +22,10 @@ a:hover {
     padding: 3%;
 }
 
+.row-color{
+    background-color: rgb(233, 198, 0);
+}
+
 .row-height{
     height: 233px;
 }
