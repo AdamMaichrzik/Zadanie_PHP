@@ -22,6 +22,10 @@ a:hover {
     padding: 3%;
 }
 
+.row-height{
+    height: 233px;
+}
+
 .navbar-items {
   padding: 5px;
 }
