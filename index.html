@@ -5,35 +5,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>PickBox</title>
 
-    <!-- Latest compiled and minified CSS -->
     <link
       rel="stylesheet"
-      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
-      integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
       crossorigin="anonymous"
     />
-
-    <!-- Optional theme -->
-    <link
-      rel="stylesheet"
-      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css"
-      integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp"
-      crossorigin="anonymous"
-    />
-
-    <!-- Latest compiled and minified JavaScript -->
-    <script
-      src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
-      integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
-      crossorigin="anonymous"
-    ></script>
     <link href="https://fonts.googleapis.com/css2?family=Gayathri:wght@400;700&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="style.css" />
     <link rel="shortcut icon" type="image/x-icon" href="favicon.png" />
   </head>
 
   <body>
-    <nav class="navbar" style="background-color: #1e1e1e; padding-top: 1%">
+    <nav class="navbar" style="background-color: #1e1e1e; padding-top: 1%; padding-bottom: 1%">
       <div class="col-md-2">
         <a href="index.html">
           <img src="favicon.png" alt="" />
@@ -51,21 +35,27 @@
       </div>
     </nav>
     <div class="container-fluid text-center">
-      <div class="row row-height">
-        <h2>Full width photo</h2>
+      <div class="row">
+        <div class="col">
+          <h2>Full width photo</h2>
+        </div>
         <img
           src="img/mountain-landscape.jpg"
           alt="Sunny mountain landscape with lake"
           class="img-fluid"
-          style="height: 100%; width: 100%"
+          style="height: 80%; width: 100%; object-fit: cover"
         />
       </div>
       <div class="row">
-        <h2>Main H1 header</h2>
-        <h1 class="h1-header-text">Company test</h1>
+        <div class="col">
+          <h2>Main H1 header</h2>
+          <h1 class="h1-header-text">Company test</h1>
+        </div>
       </div>
       <div class="row" style="margin-top: 3%">
-        <h2>List of products</h2>
+        <div class="col-12">
+          <h2>List of products</h2>
+        </div>
         <div class="col-sm-6 col-md-4 col-lg-3">
           <img
             src="img/polaroid-photo.jpg"
@@ -136,7 +126,9 @@
         </div>
       </div>
       <div class="row">
-        <h2>Three text areas</h2>
+        <div class="col-12">
+          <h2>Three text areas</h2>
+        </div>
         <div class="col-sm-6 col-md-4">
           <h2>100% happy customers</h2>
           <p>
@@ -160,7 +152,9 @@
         </div>
       </div>
       <div class="row">
-        <h2>Full width text</h2>
+        <div class="col-12">
+          <h2>Full width text</h2>
+        </div>
         <p>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore vel illo quae quod distinctio numquam facere
           enim vero sint reiciendis iure, accusamus dicta! Illum mollitia delectus illo earum natus nulla. Lorem ipsum
@@ -169,7 +163,9 @@
         </p>
       </div>
       <div class="row">
-        <h2>Opinions</h2>
+        <div class="col-12">
+          <h2>Opinions</h2>
+        </div>
         <div class="col-sm-6 col-lg-6">
           <img
             src="img/opinion-photo.jpg"
