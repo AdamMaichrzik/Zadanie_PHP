@@ -58,7 +58,7 @@ footer h2 {
 /* LOGIN PAGE CSS*/
 
 .login-container {
-  margin-top: 89px;
+  margin-top: 55px;
   height: 377px;
 }
 
@@ -75,6 +75,7 @@ footer h2 {
 
 .login-form input {
   margin-top: 8px;
+  width: 233px;
 }
 
 .login-button {
