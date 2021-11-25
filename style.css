@@ -128,13 +128,14 @@ footer h2 {
   padding: 5px 8px 5px 13px;
   text-decoration: none;
   font-size: 13px;
-  color: #818181;
+  color: #e8e8e8;
   display: block;
   transition: 0.3s;
 }
 
 .sidebar a:hover {
-  color: #f1f1f1;
+  color: gold;
+  opacity: 1;
 }
 
 .sidebar .closebtn {
@@ -150,7 +151,7 @@ footer h2 {
   cursor: pointer;
   background-color: gold;
   color: #1e1e1e;
-  padding: 10px 15px;
+  padding: 10px 5px;
   border: none;
 }
 
