@@ -130,6 +130,22 @@ footer h2 {
   padding-top: 80px;
 }
 
+.sidebar button{
+  padding: 5px 8px 5px 13px;
+  text-decoration: none;
+  font-size: 13px;
+  color: #e8e8e8;
+  display: block;
+  transition: 0.3s;
+  background-color: #1e1e1e;
+  border: none;
+}
+
+.sidebar button:hover{
+  color: gold;
+  cursor: pointer;
+}
+
 .sidebar a {
   padding: 5px 8px 5px 13px;
   text-decoration: none;
