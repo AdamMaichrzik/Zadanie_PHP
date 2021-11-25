@@ -4,19 +4,21 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>PickBox - login page</title>
+    <!-- Bootstrap CDN-->
     <link
       rel="stylesheet"
       href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
       integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
       crossorigin="anonymous"
     />
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.0.3/css/font-awesome.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
     <link href="https://fonts.googleapis.com/css2?family=Gayathri:wght@400;700&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="style.css" />
     <link rel="shortcut icon" type="image/x-icon" href="favicon.png" />
   </head>
   <body>
-    <nav class="navbar sticky-top" style="background-color: gold; padding: 1px 0px;">
+    <nav class="navbar sticky-top" style="background-color: gold; padding: 5px 8px">
       <div class="col-xs-2">
         <a href="index.html">
           <img src="favicon.png" alt="" />
@@ -34,9 +36,47 @@
     </nav>
     <div class="container-fluid text-center">
       <div class="row">
-        <div class="col-md-8 offset-md-4 login-container">
-          <div class="col-md-6">1</div>
-          <div class="col-md-6">2</div>
+        <div class="col-md-6">
+            <img src="img/contact-photo.jpg" class="img-fluid contact-photo" alt="">
+        </div>
+        <div class="col-md-6">
+          <div class="contact-form-box">
+            <form action="" method="get">
+                <label class="form-label" for="">Send us a message</label>
+              <input
+                placeholder="Name"
+                size="21"
+                class="contact-form-input"
+                type="text"
+                name="contact-form-name"
+                id=""
+              />
+              <input
+                placeholder="E-mail"
+                size="21"
+                class="contact-form-input"
+                type="email"
+                name="contact-form-email"
+                id=""
+              />
+              <textarea
+                placeholder="Your message"
+                class="contact-form-input"
+                name="contact-form-message"
+                id=""
+                cols="21"
+                rows="3"
+                maxlength="144"
+                style="resize:none;"
+              ></textarea>
+              <br />
+              <button type="button" class="btn btn-primary">
+                <i class="fa fa-send"></i>
+                Send
+              </button>
+            </form>
+          </div>
+        </div>
       </div>
     </div>
     <footer class="fixed-bottom">
