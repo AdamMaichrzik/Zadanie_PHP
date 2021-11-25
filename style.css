@@ -207,3 +207,16 @@ footer h2 {
   border-radius: 50%;
   padding: 34px;
 }
+
+@media screen and (max-width: 1060px) {
+  .contact-photo{
+    width: 377px;
+    height: 377px;
+    margin-top: 55px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .contact-photo{
+    display: none;
+  }
+}
