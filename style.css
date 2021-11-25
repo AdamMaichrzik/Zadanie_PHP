@@ -93,6 +93,11 @@ footer h2 {
   opacity: 0.8;
 }
 
+.col-centered{
+  margin: auto;
+  margin-top: 55px;
+  float: none;
+}
 /* ADMIN PANEL CSS*/
 
 .admin-panel-menu {
@@ -185,6 +190,7 @@ footer h2 {
   border-radius: 21px;
   padding: 13px;
   border: 0;
+  width: 377px;
 }
 
 .form-label{
