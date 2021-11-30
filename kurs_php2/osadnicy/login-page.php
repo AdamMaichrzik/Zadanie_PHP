@@ -4,7 +4,7 @@
 	
 	if ((isset($_SESSION['zalogowany'])) && ($_SESSION['zalogowany']==true))
 	{
-		header('Location: gra.php');
+		header('Location: admin-panel.php');
 		exit();
 	}
 
@@ -15,7 +15,7 @@
 <head>
 	<meta charset="utf-8" />
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-	<title>Osadnicy - gra przeglądarkowa</title>
+	<title>PickBox - logowanie</title>
 </head>
 
 <html lang="pl">
@@ -47,9 +47,6 @@
         <a href="#" class="navbar-items">Page</a>
         <a href="#" class="navbar-items">Page</a>
         <a href="contact-page.html" class="navbar-items">Contact</a>
-      </div>
-      <div class="col-xs-2">
-        <a href="login-page.html">Login</a>
       </div>
     </nav>
     <div class="container-fluid text-center">
