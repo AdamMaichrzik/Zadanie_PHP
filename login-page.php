@@ -35,7 +35,7 @@
     <div class="container-fluid text-center">
       <div class="row">
         <div class="col-centered login-container">
-          <form class="login-form" action="admin-panel.html" method="post">
+          <form class="login-form" action="connect.php" method="post">
             <input placeholder="Login" type="text" name="login" id="login" /> <br />
             <input placeholder="Password" type="password" name="password" id="password" /> <br />
             <input class="login-button" type="submit" value="Login" />
