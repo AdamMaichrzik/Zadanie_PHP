@@ -60,14 +60,26 @@
       <div class="row text-center">
         <div class="col-2"></div>
         <div id="website-project" class="col-10">
-        <form action="">
+        <form method="post">
             <label>Company brand</label> <br>
             <input type="text"> <br>
             <label>Meta title</label> <br>
             <input type="text"> <br>
             <label>Meta description</label> <br>
             <input type="text"> <br>
+            <input type="submit" value="submit" name="submit">
           </form>
+
+          <?php
+          require_once "connect.php";
+          //create connection
+          $connect= new mysqli($host, $db_user, $db_password, $db_name);
+          if(isset($_POST['submit']))
+          {
+              $result=mysqli_query($connect,'UPDATE companyInfo SET companyName="test"');
+          }
+          ?>
+
         </div>
       </div>
     </div>
