@@ -8,22 +8,28 @@ require_once "connect.php";
  {
 	echo 'Failed to connect to database: '.mysqli_connect_error();
 }
-    $getComponent = 0;
-    $result=mysqli_query($connect,"select * from components WHERE componentID='$getComponent'");
+    $pageGetID = $_GET['pageID'];
+    $result=mysqli_query($connect,"select * from pageInfo WHERE pageID='$pageGetID'");
 
 while($row=mysqli_fetch_array($result))
 {
-    $_SESSION['component'] = $row['componentCode'];
+  $page_title = $_SESSION['pageTitle'] = $row['pageTitle'];
+  $page_desc = $_SESSION['pageDesc'] = $row['pageDesc'];
+  $page_index = $_SESSION['pageIndex'] = $row['pageIndex'];
+  $page_H1 = $_SESSION['pageH1'] = $row['pageH1'];
+  $page_H2 = $_SESSION['pageH2'] = $row['pageH2'];
+  $page_text = $_SESSION['pageText'] = $row['pageText'];
  }
 ?>
-
 
 <html lang="pl">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>PickBox - login page</title>
+    <title> <?php echo $page_title; ?> </title>
+    <meta name="description" content="<?php echo $page_desc; ?>">
+    <meta name="robots" content="<?php $page_index ?>">
     <!-- Bootstrap CDN-->
     <link
       rel="stylesheet"
@@ -55,13 +61,14 @@ while($row=mysqli_fetch_array($result))
       </div>
     </nav>
     <div class="container-fluid text-center">
-      <div class="row">
-          <div class="col-12">
-          <?php
-           echo $_SESSION['component'];
-        ?>
+      <div class="row mt-5">
+        <h1><?php echo $page_H1;?></h1>
+          <div class="col-12 text-center">
+          <h2><?php echo $page_H2;?></h2>
+          <p>
+            <?php echo $page_text; ?>
+          </p>
           </div>
-        
         </div>
     </div>
     <footer class="fixed-bottom">
