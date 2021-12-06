@@ -29,7 +29,7 @@
   <body>
     <nav class="navbar sticky-top" style="background-color: gold; padding: 1px 8px">
       <div class="col-xs-2">
-        <a href="index.html">
+        <a href="index.php">
           <img src="favicon.png" alt="" />
         </a>
         <button class="openbtn" onclick="openNav()">☰ Panel</button>
@@ -84,7 +84,7 @@
       </div>
     </div>
     <footer style="bottom: 0">
-      <div class="footer-copyright text-center p-3">© 2021 Copyright <a href="index.html">PickBox</a></div>
+      <div class="footer-copyright text-center p-3">© 2021 Copyright <a href="index.php">PickBox</a></div>
     </footer>
     <!-- Navbar script-->
     <script>

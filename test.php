@@ -46,7 +46,7 @@ while($row=mysqli_fetch_array($result))
   <body>
     <nav class="navbar sticky-top" style="background-color: gold; padding: 5px 8px">
       <div class="col-xs-2">
-        <a href="index.html">
+        <a href="index.php">
           <img src="favicon.png" alt="" />
         </a>
       </div>
@@ -57,7 +57,7 @@ while($row=mysqli_fetch_array($result))
         <a href="contact-page.html" class="navbar-items">Contact</a>
       </div>
       <div class="col-xs-2">
-        <a href="login-page.html">Login</a>
+        <a href="login-page.php">Login</a>
       </div>
     </nav>
     <div class="container-fluid text-center">
@@ -74,7 +74,7 @@ while($row=mysqli_fetch_array($result))
     <footer class="fixed-bottom">
       <div class="footer-copyright text-center p-1">
         © 2021 Copyright
-        <a href="index.html">PickBox</a>
+        <a href="index.php">PickBox</a>
       </div>
     </footer>
     <script

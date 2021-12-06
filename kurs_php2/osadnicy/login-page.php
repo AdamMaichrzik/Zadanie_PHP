@@ -38,7 +38,7 @@
   <body>
     <nav class="navbar sticky-top" style="background-color: gold; padding: 8px">
       <div class="col-xs-2">
-        <a href="index.html">
+        <a href="index.php">
           <img src="favicon.png" alt="" />
         </a>
       </div>
@@ -64,7 +64,7 @@
       </div>
     </div>
     <footer>
-      <div class="footer-copyright text-center p-3">© 2021 Copyright <a href="index.html">PickBox</a></div>
+      <div class="footer-copyright text-center p-3">© 2021 Copyright <a href="index.php">PickBox</a></div>
     </footer>
     <script
       src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
