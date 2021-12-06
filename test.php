@@ -54,7 +54,7 @@ while($row=mysqli_fetch_array($result))
         <a href="#" class="navbar-items">Home</a>
         <a href="#" class="navbar-items">Page</a>
         <a href="#" class="navbar-items">Page</a>
-        <a href="contact-page.html" class="navbar-items">Contact</a>
+        <a href="contact-page.php" class="navbar-items">Contact</a>
       </div>
       <div class="col-xs-2">
         <a href="login-page.php">Login</a>

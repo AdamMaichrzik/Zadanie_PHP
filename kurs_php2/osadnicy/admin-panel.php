@@ -39,7 +39,7 @@
         <a href="#" class="navbar-items">Home</a>
         <a href="#" class="navbar-items">Page</a>
         <a href="#" class="navbar-items">Page</a>
-        <a href="contact-page.html" class="navbar-items">Contact</a>
+        <a href="contact-page.php" class="navbar-items">Contact</a>
       </div>
     </nav>
     <div class="container-fluid"></div>
@@ -70,8 +70,8 @@
     </div>
     <div class="container-fluid text-center">
       <div class="row text-center">
-        <div class="col-2"></div>
-        <div id="website-project" class="col-10">
+        <div id="website-project" class="col-12">
+          Welcome in the PickBox panel admin! 
         </div>
       </div>
     </div>
