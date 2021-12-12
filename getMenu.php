@@ -19,6 +19,6 @@ while($row=mysqli_fetch_array($result))
 }
 
 for ($i = 0; $i <= count($menuTitles); $i++) {
-    echo ('<a href="test.php?pageID='.$menuTitlesID[$i].'"'.'class="navbar-items">'.$menuTitles[$i]." "."</a>");
+    echo ('<a href="../page.php?pageID='.$menuTitlesID[$i].'"'.'class="navbar-items">'.$menuTitles[$i]." "."</a>");
   }
 ?>

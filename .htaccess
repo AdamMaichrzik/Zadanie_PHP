@@ -1,0 +1,9 @@
+Options -MultiViews
+RewriteEngine On
+
+# redirect "/section.php?id=xxx" to "/section/xxx"
+RewriteCond %{THE_REQUEST} \s/page\.php\?pageID=([0-9]+)\s [NC]
+RewriteRule ^ /page/%1? [R=301,L]
+
+# internally rewrite "/section/xxx" to "/section.php?id=xxx"
+RewriteRule ^page/([0-9]+)$ /page.php?pageID=$1 [L]
