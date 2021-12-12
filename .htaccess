@@ -7,3 +7,5 @@ RewriteRule ^ /page/%1? [R=301,L]
 
 # internally rewrite "/section/xxx" to "/section.php?id=xxx"
 RewriteRule ^page/([0-9]+)$ /page.php?pageID=$1 [L]
+
+ErrorDocument 404 /404.php
