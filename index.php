@@ -28,9 +28,9 @@
         </a>
       </div>
       <div class="col-xs-8">
-        <a href="#" class="navbar-items">Home</a>
-        <a href="#" class="navbar-items">Page</a>
-        <a href="#" class="navbar-items">Page</a>
+      <?php
+        require_once "getMenu.php"; 
+      ?>
         <a href="contact-page.php" class="navbar-items">Contact</a>
       </div>
       <div class="col-xs-2">

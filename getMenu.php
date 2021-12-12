@@ -15,9 +15,10 @@ $result=mysqli_query($connect,"select * from pageInfo");
 while($row=mysqli_fetch_array($result))
 {
  $menuTitles[] = $row['pageTitle'];
+ $menuTitlesID[] = $row['pageID'];
 }
 
 for ($i = 0; $i <= count($menuTitles); $i++) {
-    echo ($menuTitles[$i]." ");
+    echo ('<a href="test.php?pageID='.$menuTitlesID[$i].'"'.'class="navbar-items">'.$menuTitles[$i]." "."</a>");
   }
 ?>

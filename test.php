@@ -44,16 +44,16 @@ while($row=mysqli_fetch_array($result))
     <link rel="shortcut icon" type="image/x-icon" href="favicon.png" />
   </head>
   <body>
-    <nav class="navbar sticky-top" style="background-color: gold; padding: 5px 8px">
+  <nav class="navbar sticky-top" style="background-color: gold; padding-top: 1%; padding-bottom: 1%">
       <div class="col-xs-2">
         <a href="index.php">
           <img src="favicon.png" alt="" />
         </a>
       </div>
       <div class="col-xs-8">
-        <a href="#" class="navbar-items">Home</a>
-        <a href="#" class="navbar-items">Page</a>
-        <a href="#" class="navbar-items">Page</a>
+      <?php
+        require_once "getMenu.php"; 
+      ?>
         <a href="contact-page.php" class="navbar-items">Contact</a>
       </div>
       <div class="col-xs-2">
