@@ -55,7 +55,9 @@
     <div class="container-fluid text-center">
       <div class="row text-center">
         <div class="col-2"></div>
-        <div id="website-project" class="col-10"></div>
+        <div id="website-project" class="col-10">
+            
+        </div>
       </div>
     </div>
     <footer class="fixed-bottom">
