@@ -7,7 +7,7 @@
 		header('Location: login-page.php');
 		exit();
 	}
-	
+	include "updateCompanyInfo.php";
 ?>
 <html lang="pl">
   <head>
@@ -61,25 +61,23 @@
         <div class="col-2"></div>
         <div id="website-project" class="col-10">
         <form method="post">
-            <label>Company brand</label> <br>
-            <input type="text"> <br>
-            <label>Meta title</label> <br>
-            <input type="text"> <br>
-            <label>Meta description</label> <br>
-            <input type="text"> <br>
-            <input type="submit" value="submit" name="submit">
+            <label>Company name</label> <br>
+            <input type="text" name="companyName"> <br>
+            <label>Company NIP</label> <br>
+            <input type="number" name="companyNIP" id=""> <br>
+            <label>Company street</label> <br>
+            <input type="text" name="companyStreet" id=""> <br>
+            <label>Company postal code</label> <br>
+            <input type="text" name="companyPostalCode" id=""> <br>
+            <label>Company city anme</label> <br>
+            <input type="text" name="companyCityName"> <br>
+            <label>Company phone number</label> <br>
+            <input type="number" name="companyPhoneNumber" id=""> <br>
+            <label>Company Email</label> <br>
+            <input type="email" name="companyEmail" id=""> <br>
+            <button name="updateCompanyInfoButton">Submit</button>
+  
           </form>
-
-          <?php
-          require_once "connect.php";
-          //create connection
-          $connect= new mysqli($host, $db_user, $db_password, $db_name);
-          if(isset($_POST['submit']))
-          {
-              $result=mysqli_query($connect,'UPDATE companyInfo SET companyName="test"');
-          }
-          ?>
-
         </div>
       </div>
     </div>
