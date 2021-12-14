@@ -214,28 +214,10 @@
         </div>
       </div>
     </div>
-    <footer>
-      <div class="row text-center" style="margin: 0;">
-        <div class="col-md-6">
-          <h2>Company info</h2>
-          <p>
-            Test Company <br />
-            NIP: 123456789 <br />
-            Street 01 <br />
-            01-007 City <br />
-          </p>
-        </div>
-        <div class="col-md-6">
-          <h2>Contact</h2>
-          <p>
-            000 111 222 <br />
-            company@contact.com <br />
-            FAX: 123456789 <br />
-          </p>
-        </div>
-      </div>
-      <div class="text-center">© 2021 Copyright <a href="index.php">PickBox</a></div>
-    </footer>
+
+  <?php 
+    require_once "footer.php";
+  ?>
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script
