@@ -1,6 +1,7 @@
 <?php
 require_once "getCompanyInfo.php";
 echo '<footer>
+<div class="container">
 <div class="row text-center" style="margin: 0;">
   <div class="col-md-6">
     <h2>Company info</h2>
@@ -20,6 +21,7 @@ echo '<footer>
   </div>
 </div>
 <div class="text-center">© 2021 Copyright <a href="index.php">'.$companyName.'</a></div>
+</div>
 </footer>'
 ?>
 
