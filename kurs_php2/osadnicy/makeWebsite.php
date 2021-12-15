@@ -12,7 +12,7 @@ if ($conn->connect_error) {
 }
 
 $sql = "INSERT INTO pageInfo (pageTitle, pageDesc, pageIndex, pageH1, pageH2, pageText)
-VALUES ('Next page title - PickBox', 'Next page desc ', 'index', 'Next page blog header h1', 'Another page blog h2', 'text text')";
+VALUES ('Next page title', 'Next page desc ', 'index', 'Next page blog header h1', 'Another page blog h2', 'text text')";
 
 if ($conn->query($sql) === TRUE) {
   echo "New record created successfully";
