@@ -51,7 +51,6 @@
       ?>
       
       <div class="admin-menu-tile"><a href="admin-panel-company-info.php">Company info</a></div>
-      <div class="admin-menu-tile"><a href="#">Contact info</a></div>
       <div class="admin-menu-tile"><a href="websites.php">Websites</a></div>
       <div class="admin-menu-tile"><a href="#">Add full width photo</a></div>
       <div class="admin-menu-tile">
