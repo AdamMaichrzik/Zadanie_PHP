@@ -8,6 +8,7 @@
 		exit();
 	}
 	include "updateCompanyInfo.php";
+  include "getCompanyInfo.php";
 ?>
 <html lang="pl">
   <head>
@@ -60,23 +61,24 @@
       <div class="row text-center">
         <div class="col-2"></div>
         <div id="website-project" class="col-10">
-        <form method="post">
-            <label>Company name</label> <br>
-            <input type="text" name="companyName"> <br>
-            <label>Company NIP</label> <br>
-            <input type="number" name="companyNIP" id=""> <br>
-            <label>Company street</label> <br>
-            <input type="text" name="companyStreet" id=""> <br>
-            <label>Company postal code</label> <br>
-            <input type="text" name="companyPostalCode" id=""> <br>
-            <label>Company city anme</label> <br>
-            <input type="text" name="companyCityName"> <br>
-            <label>Company phone number</label> <br>
-            <input type="number" name="companyPhoneNumber" id=""> <br>
-            <label>Company Email</label> <br>
-            <input type="email" name="companyEmail" id=""> <br>
-            <button name="updateCompanyInfoButton">Submit</button>
-  
+          <?php
+          echo  '<form method="post">
+                <label>Company name</label> <br>
+                <input type="text" name="companyName" value="'.$companyName.'"> <br>
+                <label>Company NIP</label> <br>
+                <input type="number" name="companyNIP" value="'.$companyNIP.'" id=""> <br>
+                <label>Company street</label> <br>
+                <input type="text" name="companyStreet" value="'.$companyStreet.'" id=""> <br>
+                <label>Company postal code</label> <br>
+                <input type="text" name="companyPostalCode" value="'.$companyPostalCode.'" id=""> <br>
+                <label>Company city anme</label> <br>
+                <input type="text" name="companyCityName" value="'.$companyCityName.'"> <br>
+                <label>Company phone number</label> <br>
+                <input type="number" name="companyPhoneNumber" value="'.$companyPhoneNumber.'" id=""> <br>
+                <label>Company Email</label> <br>
+                <input type="email" name="companyEmail" value="'.$companyEmail.'" id=""> <br>
+                <button name="updateCompanyInfoButton">Submit</button>'
+            ?>
           </form>
         </div>
       </div>
