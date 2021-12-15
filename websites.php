@@ -60,9 +60,7 @@
         </div>
       </div>
     </div>
-    <footer class="fixed-bottom">
-      <div class="footer-copyright text-center p-3">© 2021 Copyright <a href="index.php">PickBox</a></div>
-    </footer>
+    <?php include "footer.php"; ?>
     <!--Admin panel scripts -->
     <script>
       function addHeader() {
