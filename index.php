@@ -214,7 +214,7 @@
         </div>
       </div>
     </div>
-
+  <!-- Footer -->
   <?php 
     require_once "footer.php";
   ?>
