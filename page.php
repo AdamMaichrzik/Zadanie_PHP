@@ -30,7 +30,7 @@ while($row=mysqli_fetch_array($result))
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title> <?php echo ($page_title." - ".$companyName); ?> </title>
     <meta name="description" content="<?php echo $page_desc; ?>">
-    <meta name="robots" content="<?php $page_index ?>">
+    <meta name="robots" content="<?php echo $page_index; ?>">
     <!-- Bootstrap CDN-->
     <link
       rel="stylesheet"
