@@ -77,9 +77,10 @@
                 <input type="number" name="companyPhoneNumber" value="'.$companyPhoneNumber.'" id=""> <br>
                 <label>Company Email</label> <br>
                 <input type="email" name="companyEmail" value="'.$companyEmail.'" id=""> <br>
-                <button name="updateCompanyInfoButton">Submit</button>'
+                <button name="updateCompanyInfoButton">Submit</button>
+                </form>
+                '
             ?>
-          </form>
         </div>
       </div>
     </div>
