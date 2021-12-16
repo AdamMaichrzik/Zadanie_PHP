@@ -1,3 +1,7 @@
+<?php
+  	include "deletePage.php";
+?>
+
 <html lang="pl">
   <head>
     <meta charset="UTF-8" />
@@ -56,7 +60,20 @@
       <div class="row text-center">
         <div class="col-2"></div>
         <div id="website-project" class="col-10">
-            
+          <table class="table table-hover" style="margin-top: 50px; margin-bottom: 50px">
+            <thead>
+              <tr>
+                <th scope="col">Page ID</th>
+                <th scope="col">Page name</th>
+                <th scope="col">Show</th>
+                <th scope="col">Edit</th>
+                <th scope="col">Delete</th>
+              </tr>
+            </thead>
+            <tbody>
+              <?php include "getBlogWebsites.php"; ?>
+            </tbody>
+          </table>
         </div>
       </div>
     </div>
