@@ -10,15 +10,33 @@ if(mysqli_connect_errno($connect))
 }
 
 $result=mysqli_query($connect,"select * from pageInfo");
-
+$question = "'Are you sure?'";
 
 while($row=mysqli_fetch_array($result))
 {
- $menuTitles[] = $row['pageTitle'];
- $menuTitlesID[] = $row['pageID'];
+ $pageTitles[] = $row['pageTitle'];
+ $pageTitlesID[] = $row['pageID'];
 }
 
-for ($i = 0; $i <= count($menuTitles); $i++) {
-    echo $menuTitles[$i];
+for ($i = 0; $i <= (count($pageTitles)-1); $i++) {
+    echo '<tr>
+    <th scope="row">
+    <form method="post">
+        <input style="border: none; outline: none; background-color: #e8e8e8; text-align: center" readonly="readonly" type="text" name="deletePageID" value="'.$pageTitlesID[$i].'"> 
+    <br>
+    </th>
+    <td>'.$pageTitles[$i].'</td>
+    <td>
+    <a href="/page/'.$pageTitlesID[$i].'" target="_blank">
+    <button type="button" class="btn btn-primary">Show</button>
+    </a>
+    </td>
+    <td><button type="button" class="btn btn-warning">Edit</button></td>
+    <td>
+        <button class="btn btn-danger" onclick="return confirm('.$question.')" name="deletePageButton">Delete</button>
+    </form>
+    </td>
+    </tr>';
   }
+
 ?>
