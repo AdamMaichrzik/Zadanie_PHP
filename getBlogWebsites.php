@@ -28,10 +28,14 @@ for ($i = 0; $i <= (count($pageTitles)-1); $i++) {
     <td>'.$pageTitles[$i].'</td>
     <td>
     <a href="/page/'.$pageTitlesID[$i].'" target="_blank">
-    <button type="button" class="btn btn-primary">Show</button>
+        <button type="button" class="btn btn-primary">Show</button>
     </a>
     </td>
-    <td><button type="button" class="btn btn-warning">Edit</button></td>
+    <td>
+    <a href="admin-panel-edit-page.php?pageID='.$pageTitlesID[$i].'" target="_blank">
+        <button name="editPageButton" type="button" class="btn btn-warning">Edit</button>
+    </a>
+    </td>
     <td>
         <button class="btn btn-danger" onclick="return confirm('.$question.')" name="deletePageButton">Delete</button>
     </form>
