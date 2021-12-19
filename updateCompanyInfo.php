@@ -27,8 +27,3 @@ $result=mysqli_query($connect,"select * from companyInfo");
     `companyPhoneNumber`='$companyPhoneNumber',`companyEmail`='$companyEmail'");
   }
 ?>
-
-
-
-
- 
