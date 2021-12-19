@@ -62,9 +62,7 @@
       <div class="admin-menu-tile">
         <button type="button" onclick="addMargin()">Add margin</button>
       </div>
-      <div class="admin-menu-tile">
-        <button type="button" onclick="makeWebsite()">Make website</button>
-      </div>
+      <div class="admin-menu-tile"><a href="admin-panel-make-website.php">Make website</a></div>
       <div class="admin-menu-tile"><a href="logout.php">Log out</a></div>
     </div>
     <div class="container-fluid text-center">
