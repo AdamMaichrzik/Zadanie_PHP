@@ -1,24 +1,27 @@
 <?php
-$host = "localhost";
-$db_user = "31300146_maichrzik";
-$db_password = "PCdi553a";
-$db_name = "31300146_maichrzik";
+require_once "connect.php";
+//create connection
+$connect= new mysqli($host, $db_user, $db_password, $db_name);
 
-// Create connection
-$conn = @new mysqli($host, $db_user, $db_password, $db_name);
-// Check connection
-if ($conn->connect_error) {
-  die("Connection failed: " . $conn->connect_error);
+//check connection
+if(mysqli_connect_errno($connect))
+{
+   echo 'Failed to connect to database: '.mysqli_connect_error();
 }
+$pageTitle = isset($_POST['pageTitle']) ? $_POST['pageTitle'] : '';
+$pageDesc = isset($_POST['pageDesc']) ? $_POST['pageDesc'] : '';
+$pageIndex = isset($_POST['pageIndex']) ? $_POST['pageIndex'] : '';
+$pageH1 = isset($_POST['pageH1']) ? $_POST['pageH1'] : '';
+$pageH2 = isset($_POST['pageH2']) ? $_POST['pageH2'] : '';
+$pageText = isset($_POST['pageText']) ? $_POST['pageText'] : '';
 
-$sql = "INSERT INTO pageInfo (pageTitle, pageDesc, pageIndex, pageH1, pageH2, pageText)
-VALUES ('Next page title', 'Next page desc ', 'index', 'Next page blog header h1', 'Another page blog h2', 'text text')";
+$result=mysqli_query($connect,"select * from pageInfo");
 
-if ($conn->query($sql) === TRUE) {
-  echo "New record created successfully";
-} else {
-  echo "Error: " . $sql . "<br>" . $conn->error;
-}
-
-$conn->close();
-?> 
+  if(isset($_POST['makeWebsiteButton']))
+  {
+    //Sending data to DB
+    $sql = $connect -> 
+    query("INSERT INTO `pageInfo`(`pageTitle`, `pageDesc`, `pageIndex`, `pageH1`, `pageH2`, `pageText`) 
+    VALUES ('$pageTitle','$pageDesc','$pageIndex','$pageH1','$pageH2','$pageText')");
+  }
+?>
