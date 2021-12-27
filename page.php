@@ -61,10 +61,10 @@ while($row=mysqli_fetch_array($result))
         <a href="../login-page.php">Login</a>
       </div>
     </nav>
-    <div class="container-fluid text-center">
+    <div class="container-fluid">
       <div class="row mt-5">
         <h1><?php echo $page_H1;?></h1>
-          <div class="col-12 text-center">
+          <div class="col-12">
           <h2><?php echo $page_H2;?></h2>
           <p>
             <?php echo $page_text; ?>
