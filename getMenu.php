@@ -9,16 +9,16 @@ if(mysqli_connect_errno($connect))
    echo 'Failed to connect to database: '.mysqli_connect_error();
 }
 
-$result=mysqli_query($connect,"select * from pageInfo");
+$result=mysqli_query($connect,"select * from dragdrop");
 
 
 while($row=mysqli_fetch_array($result))
 {
- $menuTitles[] = $row['pageTitle'];
- $menuTitlesID[] = $row['pageID'];
+ $menuTitles[] = $row['text'];
+ $menuLinks[] = $row['href'];
 }
 
 for ($i = 0; $i <= count($menuTitles); $i++) {
-    echo ('<a href="../blog/'.$menuTitlesID[$i].'"'.'class="navbar-items">'.$menuTitles[$i]." "."</a>");
+    echo ('<a href="'.$menuLinks[$i].'"'.'class="navbar-items">'.$menuTitles[$i]." "."</a>");
   }
 ?>
