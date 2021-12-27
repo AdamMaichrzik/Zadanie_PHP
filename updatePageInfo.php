@@ -12,7 +12,6 @@ $url_components = parse_url($link);
 parse_str($url_components['query'], $params);
 
 $test = $params['pageID'];
-echo ("i am update page".$test);
 //check connection
 if(mysqli_connect_errno($connect))
 {
