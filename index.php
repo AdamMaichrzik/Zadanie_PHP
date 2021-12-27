@@ -31,7 +31,6 @@
       <?php
         require_once "getMenu.php"; 
       ?>
-        <a href="Contact" class="navbar-items">Contact</a>
       </div>
       <div class="col-xs-2">
         <a href="login-page.php">Login</a>
