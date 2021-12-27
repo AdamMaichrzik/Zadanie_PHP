@@ -13,7 +13,6 @@ if ($_POST['update'] == "update"){
  foreach ($array as $idval) {
   $sql = "UPDATE dragdrop SET listorder = " . $count . " WHERE id = " . $idval;
   if ($connect->query($sql) === TRUE) {
-  echo "Record updated successfully";
  } else {
   echo "Error updating record: " . $connect->error;
  }
