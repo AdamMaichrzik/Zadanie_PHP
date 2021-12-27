@@ -8,8 +8,11 @@ body {
 
 a {
   cursor: pointer;
+  text-decoration: none;
+  color: #1e1e1e;
 }
 
+a:link,
 a:active,
 a:visited {
   text-decoration: none;
