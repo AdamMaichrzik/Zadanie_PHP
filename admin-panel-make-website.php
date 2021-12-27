@@ -72,7 +72,12 @@
                 <label>Page desc</label> <br>
                 <input required type="text" name="pageDesc"> <br>
                 <label>Page index</label> <br>
-                <input required type="text" name="pageIndex"> <br>
+                <select required name="pageIndex">
+                  <option>index, follow</option>
+                  <option>index, nofollow</option>
+                  <option>noindex, follow</option>
+                  <option>noindex, nofollow</option>
+                </select> <br>
                 <label>Page h1</label> <br>
                 <input required type="text" name="pageH1"> <br>
                 <label>Page H2</label> <br>
