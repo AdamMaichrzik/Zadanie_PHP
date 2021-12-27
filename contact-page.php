@@ -18,22 +18,9 @@
     <link rel="shortcut icon" type="image/x-icon" href="favicon.png" />
   </head>
   <body>
-    <nav class="navbar sticky-top" style="background-color: gold; padding: 5px 8px">
-      <div class="col-xs-2">
-        <a href="index.php">
-          <img src="favicon.png" alt="" />
-        </a>
-      </div>
-      <div class="col-xs-8">
-        <a href="#" class="navbar-items">Home</a>
-        <a href="#" class="navbar-items">Page</a>
-        <a href="#" class="navbar-items">Page</a>
-        <a href="contact-page.php" class="navbar-items">Contact</a>
-      </div>
-      <div class="col-xs-2">
-        <a href="login-page.php">Login</a>
-      </div>
-    </nav>
+    <?php
+      require_once "header.php";
+    ?>
     <div class="container-fluid text-center">
       <div class="row">
         <div class="col-12 col-md-6 contact-photo-div">

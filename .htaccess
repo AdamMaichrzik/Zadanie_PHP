@@ -2,11 +2,12 @@ Options -MultiViews
 RewriteEngine On
 
 RewriteRule Contact contact-page.php
+RewriteRule Admin-Panel admin-panel.php
+RewriteRule Login-Page login-page.php
 
 
 RewriteCond %{THE_REQUEST} ^.*/index\.php 
 RewriteRule ^(.*)index.php$ /$1 [R=301,L] 
-
 
 # redirect "/section.php?id=xxx" to "/section/xxx"
 RewriteCond %{THE_REQUEST} \s/page\.php\?pageID=([0-9]+)\s [NC]

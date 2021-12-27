@@ -20,21 +20,9 @@
     <link rel="shortcut icon" type="image/x-icon" href="favicon.png" />
   </head>
   <body>
-    <nav class="navbar sticky-top" style="background-color: gold; padding: 1px 8px">
-      <div class="col-xs-2">
-        <a href="index.php">
-          <img src="favicon.png" alt="" />
-        </a>
-        <button class="openbtn" onclick="openNav()">☰ Panel</button>
-      </div>
-
-      <div class="col-xs-10">
-        <a href="#" class="navbar-items">Home</a>
-        <a href="#" class="navbar-items">Page</a>
-        <a href="#" class="navbar-items">Page</a>
-        <a href="contact-page.php" class="navbar-items">Contact</a>
-      </div>
-    </nav>
+  <?php
+      require_once "header.php";
+    ?>
     <div class="container-fluid"></div>
     <div id="mySidebar" class="sidebar">
       <a href="javascript:void(0)" class="closebtn" style="color: tomato" onclick="closeNav()">X</a>

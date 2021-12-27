@@ -21,21 +21,9 @@
   </head>
 
   <body>
-    <nav class="navbar sticky-top" style="background-color: gold; padding-top: 1%; padding-bottom: 1%">
-      <div class="col-xs-2">
-        <a href="index.php">
-          <img src="favicon.png" alt="" />
-        </a>
-      </div>
-      <div class="col-xs-8">
-      <?php
-        require_once "getMenu.php"; 
-      ?>
-      </div>
-      <div class="col-xs-2">
-        <a href="login-page.php">Login</a>
-      </div>
-    </nav>
+    <?php
+      require_once "header.php";
+    ?>
     <div class="container-fluid text-center">
       <div class="row">
         <div class="col">

@@ -4,7 +4,7 @@
 	
 	if ((isset($_SESSION['zalogowany'])) && ($_SESSION['zalogowany']==true))
 	{
-		header('Location: admin-panel.php');
+		header('Location: Admin-Panel');
 		exit();
 	}
 
@@ -36,19 +36,9 @@
     <link rel="shortcut icon" type="image/x-icon" href="favicon.png" />
   </head>
   <body>
-    <nav class="navbar sticky-top" style="background-color: gold; padding: 8px">
-      <div class="col-xs-2">
-        <a href="index.php">
-          <img src="favicon.png" alt="" />
-        </a>
-      </div>
-      <div class="col-xs-8">
-        <a href="#" class="navbar-items">Home</a>
-        <a href="#" class="navbar-items">Page</a>
-        <a href="#" class="navbar-items">Page</a>
-        <a href="contact-page.php" class="navbar-items">Contact</a>
-      </div>
-    </nav>
+    <?php
+      require_once "header.php";
+    ?>
     <div class="container-fluid text-center">
       <div class="row">
         <div class="col-centered login-container">
