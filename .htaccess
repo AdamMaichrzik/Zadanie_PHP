@@ -1,9 +1,11 @@
 Options -MultiViews
 RewriteEngine On
 
+
 RewriteRule Contact contact-page.php
 RewriteRule Admin-Panel admin-panel.php
 RewriteRule Login-Page login-page.php
+
 
 
 RewriteCond %{THE_REQUEST} ^.*/index\.php 
