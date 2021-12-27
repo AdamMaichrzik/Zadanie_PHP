@@ -36,9 +36,7 @@
     <link rel="shortcut icon" type="image/x-icon" href="favicon.png" />
   </head>
   <body>
-    <?php
-      require_once "header.php";
-    ?>
+  <?php require_once "menu.php" ;?>
     <div class="container-fluid text-center">
       <div class="row">
         <div class="col-centered login-container">

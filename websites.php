@@ -20,9 +20,7 @@
     <link rel="shortcut icon" type="image/x-icon" href="favicon.png" />
   </head>
   <body>
-  <?php
-      require_once "header.php";
-    ?>
+  <?php require_once "menu.php" ;?>
     <div class="container-fluid"></div>
     <div id="mySidebar" class="sidebar">
       <a href="javascript:void(0)" class="closebtn" style="color: tomato" onclick="closeNav()">X</a>

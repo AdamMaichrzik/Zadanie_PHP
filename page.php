@@ -45,21 +45,7 @@ while($row=mysqli_fetch_array($result))
     <link rel="shortcut icon" type="image/x-icon" href="favicon.png" />
   </head>
   <body>
-  <nav class="navbar sticky-top" style="background-color: gold; padding-top: 1%; padding-bottom: 1%">
-      <div class="col-xs-2">
-        <a href="../index.php">
-          <img src="../favicon.png" alt="" />
-        </a>
-      </div>
-      <div class="col-xs-8">
-      <?php
-        require_once "getMenu.php"; 
-      ?>
-      </div>
-      <div class="col-xs-2">
-        <a href="../login-page.php">Login</a>
-      </div>
-    </nav>
+  <?php require_once "menu.php" ?>
     <div class="container-fluid">
       <div class="row mt-5">
         <h1><?php echo $page_H1;?></h1>
