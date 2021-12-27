@@ -11,6 +11,7 @@
     include "getPageInfo.php";
     $question = "'Are you sure?'";
 ?>
+<!DOCTYPE html>
 <html lang="pl">
   <head>
     <meta charset="UTF-8" />
@@ -27,6 +28,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Gayathri:wght@400;700&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="style.css" />
     <link rel="shortcut icon" type="image/x-icon" href="favicon.png" />
+    <script src="https://cdn.tiny.cloud/1/gbmty4rjniqtzpcgafpxoh68y4emgqle7i7uzry55fqkhqio/tinymce/5/tinymce.min.js" referrerpolicy="origin"></script>
   </head>
   <body>
     <nav class="navbar sticky-top" style="background-color: gold; padding: 1px 8px">
@@ -77,7 +79,7 @@
                 <label>Page H2</label> <br>
                 <input type="text" name="pageH2" value="'.$pageH2.'" id=""> <br>
                 <label>Page text</label> <br>
-                <input type="text" name="pageText" value="'.$pageText.'" id=""> <br>
+                <textarea name="pageText" style="height: 377px;" id="myTextarea"></textarea>
                 <button onclick="return confirm('.$question.')" name="updatePageInfoButton">Update page</button>
                 </form>
                 '
@@ -88,6 +90,27 @@
     <footer style="bottom: 0">
       <div class="footer-copyright text-center p-3">© 2021 Copyright <a href="index.php">PickBox</a></div>
     </footer>
+    <script>
+      <?php $trimmer = trim(preg_replace('/\s+/', ' ', $pageText)); ?>
+    tinymce.init({
+      selector: '#myTextarea',
+      setup: function (editor) {
+        editor.on('init', function (e) {
+          editor.setContent('<?php echo $trimmer; ?>');
+        });
+      }
+    });
+  </script>
+  <script>
+    tinymce.init({
+      selector: 'textarea',
+      plugins: 'a11ychecker advcode casechange export formatpainter linkchecker autolink lists checklist media mediaembed pageembed permanentpen powerpaste table advtable tinycomments tinymcespellchecker',
+      toolbar: 'a11ycheck addcomment showcomments casechange checklist code export formatpainter pageembed permanentpen table',
+      toolbar_mode: 'floating',
+      tinycomments_mode: 'embedded',
+      tinycomments_author: 'Author name',
+    });
+  </script>
     <!-- Navbar script-->
     <script>
       function openNav() {
