@@ -9,7 +9,8 @@ echo '<footer>
       '.$companyName.' <br />
       NIP: '.$companyNIP.' <br />
       '.$companyStreet.' <br />
-      '.$companyPostalCode.' '.$companyCity.' <br />
+      '.$companyPostalCode.' <br>
+      '.$companyCityName.' <br />
     </p>
   </div>
   <div class="col-md-6">
