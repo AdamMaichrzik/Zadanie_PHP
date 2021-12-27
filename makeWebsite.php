@@ -17,11 +17,23 @@ $pageText = isset($_POST['pageText']) ? $_POST['pageText'] : '';
 
 $result=mysqli_query($connect,"select * from pageInfo");
 
+
   if(isset($_POST['makeWebsiteButton']))
   {
     //Sending data to DB
     $sql = $connect -> 
     query("INSERT INTO `pageInfo`(`pageTitle`, `pageDesc`, `pageIndex`, `pageH1`, `pageH2`, `pageText`) 
     VALUES ('$pageTitle','$pageDesc','$pageIndex','$pageH1','$pageH2','$pageText')");
+  }
+
+  $result=mysqli_query($connect,"select * from dragdrop");
+
+  if(isset($_POST['makeWebsiteButton']))
+  {
+    $result = mysqli_query($connect, "SELECT MAX(pageID) FROM pageInfo;");
+    $row = mysqli_fetch_array($result);
+    $getLastIDPlus = ('/'.'blog'.'/'.$row['MAX(pageID)']);
+    $sql = $connect -> 
+    query("INSERT INTO `dragdrop`(`text`, `href`) VALUES ('$pageTitle', '$getLastIDPlus')");
   }
 ?>
