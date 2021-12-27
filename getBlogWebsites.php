@@ -27,7 +27,7 @@ for ($i = 0; $i <= (count($pageTitles)-1); $i++) {
     </th>
     <td>'.$pageTitles[$i].'</td>
     <td>
-    <a href="/page/'.$pageTitlesID[$i].'" target="_blank">
+    <a href="/blog/'.$pageTitlesID[$i].'" target="_blank">
         <button type="button" class="btn btn-primary">Show</button>
     </a>
     </td>
