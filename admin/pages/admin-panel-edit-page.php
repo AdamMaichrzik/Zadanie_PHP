@@ -7,21 +7,20 @@
 		header('Location: login-page.php');
 		exit();
 	}
-
-    include_once "makeWebsite.php";
-    $question = "'Make new website?'";
+    include "updatePageInfo.php";
+    include "getPageInfo.php";
+    $question = "'Are you sure?'";
 ?>
 <!DOCTYPE html>
-<html>
-<head>
-  <?php require_once "header.php"; ?>
+<html lang="pl">
+  <head>
+    <?php require_once "header.php"; ?>
     <title>PickBox - login page</title>
-    <link rel="stylesheet" href="style.css" />
-  <script src="https://cdn.tiny.cloud/1/gbmty4rjniqtzpcgafpxoh68y4emgqle7i7uzry55fqkhqio/tinymce/5/tinymce.min.js" referrerpolicy="origin"></script>
-</head>
-<body>
-<?php require_once "menu.php"; ?>
-
+    <link rel="stylesheet" href="../../style.css" />
+    <script src="https://cdn.tiny.cloud/1/gbmty4rjniqtzpcgafpxoh68y4emgqle7i7uzry55fqkhqio/tinymce/5/tinymce.min.js" referrerpolicy="origin"></script>
+  </head>
+  <body>
+    <?php require_once "menu.php"; ?>
     <div class="container-fluid"></div>
     <div id="mySidebar" class="sidebar">
       <a href="javascript:void(0)" class="closebtn" style="color: tomato" onclick="closeNav()">X</a>
@@ -40,27 +39,23 @@
       <div class="row text-center">
         <div class="col-2"></div>
         <div id="website-project" class="col-10">
-
-        <?php
+          <?php
           echo  '<form method="post">
+                <label>Page ID</label> <br>
+                <input readonly="readonly" type="text" name="deletePageID" value="'.$params['pageID'].'"> <br>
                 <label>Page title</label> <br>
-                <input required type="text" name="pageTitle"> <br>
+                <input type="text" name="pageTitle" value="'.$pageTitle.'" id=""> <br>
                 <label>Page desc</label> <br>
-                <input required type="text" name="pageDesc"> <br>
+                <input type="text" name="pageDesc" value="'.$pageDesc.'" id=""> <br>
                 <label>Page index</label> <br>
-                <select required name="pageIndex">
-                  <option>index, follow</option>
-                  <option>index, nofollow</option>
-                  <option>noindex, follow</option>
-                  <option>noindex, nofollow</option>
-                </select> <br>
+                <input type="text" name="pageIndex" value="'.$pageIndex.'" id=""> <br>
                 <label>Page h1</label> <br>
-                <input required type="text" name="pageH1"> <br>
+                <input type="text" name="pageH1" value="'.$pageH1.'"> <br>
                 <label>Page H2</label> <br>
-                <input required type="text" name="pageH2"> <br>
+                <input type="text" name="pageH2" value="'.$pageH2.'" id=""> <br>
                 <label>Page text</label> <br>
-                <textarea name="pageText"></textarea>
-                <button onclick="return confirm('.$question.')" name="makeWebsiteButton">Update page</button>
+                <textarea name="pageText" style="height: 377px;" id="myTextarea"></textarea>
+                <button onclick="return confirm('.$question.')" name="updatePageInfoButton">Update page</button>
                 </form>
                 '
             ?>
@@ -71,16 +66,26 @@
       <div class="footer-copyright text-center p-3">© 2021 Copyright <a href="index.php">PickBox</a></div>
     </footer>
     <script>
-        tinymce.init({
-        selector: 'textarea',
-        plugins: 'a11ychecker advcode casechange export formatpainter linkchecker autolink lists checklist media mediaembed pageembed permanentpen powerpaste table advtable tinycomments tinymcespellchecker',
-        toolbar: 'a11ycheck addcomment showcomments casechange checklist code export formatpainter pageembed permanentpen table',
-        toolbar_mode: 'floating',
-        tinycomments_mode: 'embedded',
-        tinycomments_author: 'Author name',
-        entity_encoding: 'raw',
+      <?php $trimmer = trim(preg_replace('/\s+/', ' ', $pageText)); ?>
+    tinymce.init({
+      selector: '#myTextarea',
+      setup: function (editor) {
+        editor.on('init', function (e) {
+          editor.setContent('<?php echo $trimmer; ?>');
         });
-    </script>
+      }
+    });
+  </script>
+  <script>
+    tinymce.init({
+      selector: 'textarea',
+      plugins: 'a11ychecker advcode casechange export formatpainter linkchecker autolink lists checklist media mediaembed pageembed permanentpen powerpaste table advtable tinycomments tinymcespellchecker',
+      toolbar: 'a11ycheck addcomment showcomments casechange checklist code export formatpainter pageembed permanentpen table',
+      toolbar_mode: 'floating',
+      tinycomments_mode: 'embedded',
+      tinycomments_author: 'Author name',
+    });
+  </script>
     <!-- Navbar script-->
     <script>
       function openNav() {
@@ -109,5 +114,5 @@
       integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
       crossorigin="anonymous"
     ></script>
-</body>
+  </body>
 </html>

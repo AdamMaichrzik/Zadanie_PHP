@@ -6,7 +6,7 @@
   <head>
     <?php require_once "header.php" ?>
     <title>PickBox - login page</title>
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="../../style.css" />
   </head>
   <body>
   <?php require_once "menu.php" ;?>

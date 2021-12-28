@@ -4,23 +4,20 @@
 	
 	if (!isset($_SESSION['zalogowany']))
 	{
-		header('Location: login-page.php');
+		header('Location: Login-Page');
 		exit();
 	}
-    include "updatePageInfo.php";
-    include "getPageInfo.php";
-    $question = "'Are you sure?'";
+	include "updateCompanyInfo.php";
+  include "getCompanyInfo.php";
 ?>
-<!DOCTYPE html>
 <html lang="pl">
   <head>
-    <?php require_once "header.php"; ?>
+    <?php require_once "header.php" ?>
     <title>PickBox - login page</title>
-    <link rel="stylesheet" href="style.css" />
-    <script src="https://cdn.tiny.cloud/1/gbmty4rjniqtzpcgafpxoh68y4emgqle7i7uzry55fqkhqio/tinymce/5/tinymce.min.js" referrerpolicy="origin"></script>
+    <link rel="stylesheet" href="../../style.css" />
   </head>
   <body>
-    <?php require_once "menu.php"; ?>
+    <?php require_once "menu.php"?>
     <div class="container-fluid"></div>
     <div id="mySidebar" class="sidebar">
       <a href="javascript:void(0)" class="closebtn" style="color: tomato" onclick="closeNav()">X</a>
@@ -41,21 +38,21 @@
         <div id="website-project" class="col-10">
           <?php
           echo  '<form method="post">
-                <label>Page ID</label> <br>
-                <input readonly="readonly" type="text" name="deletePageID" value="'.$params['pageID'].'"> <br>
-                <label>Page title</label> <br>
-                <input type="text" name="pageTitle" value="'.$pageTitle.'" id=""> <br>
-                <label>Page desc</label> <br>
-                <input type="text" name="pageDesc" value="'.$pageDesc.'" id=""> <br>
-                <label>Page index</label> <br>
-                <input type="text" name="pageIndex" value="'.$pageIndex.'" id=""> <br>
-                <label>Page h1</label> <br>
-                <input type="text" name="pageH1" value="'.$pageH1.'"> <br>
-                <label>Page H2</label> <br>
-                <input type="text" name="pageH2" value="'.$pageH2.'" id=""> <br>
-                <label>Page text</label> <br>
-                <textarea name="pageText" style="height: 377px;" id="myTextarea"></textarea>
-                <button onclick="return confirm('.$question.')" name="updatePageInfoButton">Update page</button>
+                <label>Company name</label> <br>
+                <input required type="text" name="companyName" value="'.$companyName.'"> <br>
+                <label>Company NIP</label> <br>
+                <input required type="number" name="companyNIP" value="'.$companyNIP.'" id=""> <br>
+                <label>Company street</label> <br>
+                <input required type="text" name="companyStreet" value="'.$companyStreet.'" id=""> <br>
+                <label>Company postal code</label> <br>
+                <input required type="text" name="companyPostalCode" value="'.$companyPostalCode.'" id=""> <br>
+                <label>Company city anme</label> <br>
+                <input required type="text" name="companyCityName" value="'.$companyCityName.'"> <br>
+                <label>Company phone number</label> <br>
+                <input required type="number" name="companyPhoneNumber" value="'.$companyPhoneNumber.'" id=""> <br>
+                <label>Company Email</label> <br>
+                <input required type="email" name="companyEmail" value="'.$companyEmail.'" id=""> <br>
+                <button name="updateCompanyInfoButton">Submit</button>
                 </form>
                 '
             ?>
@@ -65,27 +62,6 @@
     <footer style="bottom: 0">
       <div class="footer-copyright text-center p-3">© 2021 Copyright <a href="index.php">PickBox</a></div>
     </footer>
-    <script>
-      <?php $trimmer = trim(preg_replace('/\s+/', ' ', $pageText)); ?>
-    tinymce.init({
-      selector: '#myTextarea',
-      setup: function (editor) {
-        editor.on('init', function (e) {
-          editor.setContent('<?php echo $trimmer; ?>');
-        });
-      }
-    });
-  </script>
-  <script>
-    tinymce.init({
-      selector: 'textarea',
-      plugins: 'a11ychecker advcode casechange export formatpainter linkchecker autolink lists checklist media mediaembed pageembed permanentpen powerpaste table advtable tinycomments tinymcespellchecker',
-      toolbar: 'a11ycheck addcomment showcomments casechange checklist code export formatpainter pageembed permanentpen table',
-      toolbar_mode: 'floating',
-      tinycomments_mode: 'embedded',
-      tinycomments_author: 'Author name',
-    });
-  </script>
     <!-- Navbar script-->
     <script>
       function openNav() {
