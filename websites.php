@@ -24,23 +24,10 @@
     <div class="container-fluid"></div>
     <div id="mySidebar" class="sidebar">
       <a href="javascript:void(0)" class="closebtn" style="color: tomato" onclick="closeNav()">X</a>
-      <div class="admin-menu-tile"><a href="#">Company info</a></div>
-      <div class="admin-menu-tile"><a href="#">Contact info</a></div>
-      <div class="admin-menu-tile"><a href="">Websites</a></div>
-      <div class="admin-menu-tile"><a href="#">Add full width photo</a></div>
-      <div class="admin-menu-tile">
-        <button type="button" onclick="addHeader()">Add H1</button>
-      </div>
-      <div class="admin-menu-tile">
-        <button type="button" onclick="addPhoto()">Add photo</button>
-      </div>
-      <div class="admin-menu-tile">
-        <button type="button" onclick="addMargin()">Add margin</button>
-      </div>
-      <div class="admin-menu-tile">
-        <button type="button" onclick="makeWebsite()">Make website</button>
-      </div>
-      <div class="admin-menu-tile"><a href="#">Log out</a></div>
+      <div class="admin-menu-tile"><a href="admin-panel-company-info.php">Company info</a></div>
+      <div class="admin-menu-tile"><a href="websites.php">Websites</a></div>
+      <div class="admin-menu-tile"><a href="admin-panel-make-website.php">Make website</a></div>
+      <div class="admin-menu-tile"><a href="logout.php">Log out</a></div>
     </div>
     <div class="container-fluid text-center">
       <div class="row text-center">
@@ -64,24 +51,6 @@
       </div>
     </div>
     <?php include "footer.php"; ?>
-    <!--Admin panel scripts -->
-    <script>
-      function addHeader() {
-        document.getElementById("website-project").innerHTML =
-          document.getElementById("website-project").innerHTML + '<div class="col-12"> <h1>test</h1> </div>';
-      }
-
-      function addPhoto() {
-        document.getElementById("website-project").innerHTML =
-          document.getElementById("website-project").innerHTML +
-          '<div class="row"><img src="img/mountain-landscape.jpg" alt="Sunny mountain landscape with lake" class="img-fluid" style="height: 80%; width: 100%; object-fit: cover" /> </div>';
-      }
-
-      function addMargin() {
-        document.getElementById("website-project").innerHTML =
-          document.getElementById("website-project").innerHTML + '<div class="col-12"><br><br><br></div>';
-      }
-    </script>
     <!-- Navbar script-->
     <script>
       function openNav() {
