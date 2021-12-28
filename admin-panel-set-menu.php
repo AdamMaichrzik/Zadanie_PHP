@@ -38,7 +38,7 @@ $(document).ready(function(){
    $(function() {
   $("#list ul").sortable({ opacity: 0.8, cursor: 'move', update: function() {
     var order = $(this).sortable("serialize") + '&update=update';
-    $.post("admin-panel-update-menu.php", order, function(theResponse){
+    $.post("updateMenu.php", order, function(theResponse){
   $("#response").html(theResponse);
   $("#response").slideDown('slow');
   slideout();
