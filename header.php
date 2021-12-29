@@ -12,4 +12,7 @@
         <link href="https://fonts.googleapis.com/css2?family=Gayathri:wght@400;700&display=swap" rel="stylesheet" />
         <link rel="shortcut icon" type="image/x-icon" href="favicon.png" />
         <!-- All photos from https://unsplash.com/ --> '
+        ;if (strpos($_SERVER['REQUEST_URI'], "Admin") !== false){
+            echo '<meta name="robots" content="noindex, nofollow">';
+        };
 ?>
