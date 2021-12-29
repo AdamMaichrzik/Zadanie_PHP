@@ -15,7 +15,7 @@
 <html lang="pl">
   <head>
     <?php require_once "header.php"; ?>
-    <title>PickBox - login page</title>
+    <title>PickBox - edit page</title>
     <link rel="stylesheet" href="../../style.css" />
     <script src="https://cdn.tiny.cloud/1/gbmty4rjniqtzpcgafpxoh68y4emgqle7i7uzry55fqkhqio/tinymce/5/tinymce.min.js" referrerpolicy="origin"></script>
   </head>
@@ -51,9 +51,17 @@
       </div>
     </div>
     <?php require_once "footer.php" ?>
-    
     <?php $trimmer = trim(preg_replace('/\s+/', ' ', $pageText)); ?>
-    <script src="../../admin/functions/JS/tinyMCEdeleteWhitespaces.js"></script>
+    <script>
+      tinymce.init({
+          selector: '#myTextarea',
+          setup: function (editor) {
+            editor.on('init', function (e) {
+              editor.setContent('<?php echo $trimmer; ?>');
+            });
+          }
+        });
+    </script>
     <script src="../../admin/functions/JS/createTinyMCE.js"></script>
     <script src="../../admin/functions/JS/adminPanelNavbar.js"></script>
     <!-- Bootstrap scripts-->
