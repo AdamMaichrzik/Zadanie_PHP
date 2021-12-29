@@ -13,8 +13,8 @@ require_once "../functions/PHP/getComponents.php"; ?>
   </head>
   <body>
   <?php require_once "../functions/PHP/menu.php" ?>
-    <div class="container-fluid">
-      <div class="row mt-5">
+    <div class="container-fluid mt-5">
+      <div class="row m-3">
         <h1><?php echo $page_H1;?></h1>
           <div class="col-12">
           <h2><?php echo $page_H2;?></h2>
