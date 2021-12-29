@@ -21,7 +21,7 @@
       </p>
     </div>
   </div>
-  <div class="text-center">© 2021 Copyright <a href="index.php">'.$companyName.'</a></div>
+  <div class="text-center">© 2021 Copyright <a href="/index.php">'.$companyName.'</a></div>
   </div>
   </footer>'
 ?>
