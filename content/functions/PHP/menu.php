@@ -5,8 +5,12 @@ echo '
       <div class="col-xs-2">
         <a href="index.php">
           <img src="favicon.png" alt="" />
-        </a>
-        <button class="openbtn" onclick="openNav()">☰ Panel</button>
+        </a>'
+        ;if (strpos($_SERVER['REQUEST_URI'], "Admin") !== false){
+          echo '<button class="openbtn" onclick="openNav()">☰ Panel</button>';
+          };
+        
+        echo '
       </div>
       <div class="col-xs-8">
       '
