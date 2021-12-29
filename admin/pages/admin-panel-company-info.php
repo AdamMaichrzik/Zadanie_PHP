@@ -13,7 +13,7 @@
 <html lang="pl">
   <head>
     <?php require_once "header.php" ?>
-    <title>PickBox - login page</title>
+    <title>PickBox - company info</title>
     <link rel="stylesheet" href="../../style.css" />
   </head>
   <body>

@@ -15,7 +15,7 @@
 <html>
 <head>
   <?php require_once "header.php"; ?>
-  <title>PickBox - login page</title>
+  <title>PickBox - make page</title>
   <link rel="stylesheet" href="../../style.css" />
   <script src="https://cdn.tiny.cloud/1/gbmty4rjniqtzpcgafpxoh68y4emgqle7i7uzry55fqkhqio/tinymce/5/tinymce.min.js" referrerpolicy="origin"></script>
 </head>
