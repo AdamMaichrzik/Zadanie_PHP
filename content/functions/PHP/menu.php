@@ -19,7 +19,7 @@ echo '
       echo '
       </div>
       <div class="col-xs-2">
-        <a href="Login-Page">Login</a>
+        <a href="/Login-Page">Login</a>
       </div>
     </nav>'
 ?>
