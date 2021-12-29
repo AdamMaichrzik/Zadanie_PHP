@@ -32,7 +32,7 @@ for ($i = 0; $i <= (count($pageTitles)-1); $i++) {
     </a>
     </td>
     <td>
-    <a href="admin-panel-edit-page.php?pageID='.$pageTitlesID[$i].'" target="_blank">
+    <a href="Admin-Panel-Edit-Page?pageID='.$pageTitlesID[$i].'" target="_blank">
         <button name="editPageButton" type="button" class="btn btn-warning">Edit</button>
     </a>
     </td>

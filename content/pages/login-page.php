@@ -12,31 +12,13 @@
 
 <!DOCTYPE HTML>
 <html lang="pl">
-<head>
-	<meta charset="utf-8" />
-	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-	<title>PickBox - logowanie</title>
-</head>
-
-<html lang="pl">
   <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <?php require_once "header.php"; ?>
     <title>PickBox - login page</title>
-    <link
-      rel="stylesheet"
-      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
-      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
-      crossorigin="anonymous"
-    />
-
-    <link href="https://fonts.googleapis.com/css2?family=Gayathri:wght@400;700&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="style.css" />
-    <link rel="shortcut icon" type="image/x-icon" href="favicon.png" />
+    <link rel="stylesheet" href="../../style.css" />
   </head>
   <body>
-  <?php require_once "menu.php" ;?>
+  <?php require_once "../functions/PHP/menu.php" ;?>
     <div class="container-fluid text-center">
       <div class="row">
         <div class="col-centered login-container">
@@ -51,9 +33,7 @@
         </div>
       </div>
     </div>
-    <footer>
-      <div class="footer-copyright text-center p-3">© 2021 Copyright <a href="index.php">PickBox</a></div>
-    </footer>
+    <?php require_once "footer.php"; ?>
     <script
       src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
       integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"

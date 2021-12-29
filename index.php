@@ -21,7 +21,7 @@
   </head>
 
   <body>
-  <?php require_once "menu.php" ;?>
+  <?php require_once "content/functions/PHP/menu.php" ;?>
     <div class="container-fluid text-center">
       <div class="row">
         <div class="col">

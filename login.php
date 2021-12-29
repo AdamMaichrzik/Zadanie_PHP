@@ -4,7 +4,7 @@
 	
 	if ((!isset($_POST['login'])) || (!isset($_POST['haslo'])))
 	{
-		header('Location: login-page.php');
+		header('Location: Login-Page');
 		exit();
 	}
 
@@ -40,7 +40,7 @@
 				
 				unset($_SESSION['blad']);
 				$rezultat->free_result();
-				header('Location: admin-panel.php');
+				header('Location: Admin-Panel');
 				
 			} else {
 				

@@ -1,5 +1,5 @@
 <?php
-  	include "deletePage.php";
+  	include "../../admin/functions/PHP/deletePage.php";
 ?>
 
 <html lang="pl">
@@ -9,15 +9,9 @@
     <link rel="stylesheet" href="../../style.css" />
   </head>
   <body>
-  <?php require_once "menu.php" ;?>
+  <?php require_once "../../content/functions/PHP/menu.php" ;?>
     <div class="container-fluid"></div>
-    <div id="mySidebar" class="sidebar">
-      <a href="javascript:void(0)" class="closebtn" style="color: tomato" onclick="closeNav()">X</a>
-      <div class="admin-menu-tile"><a href="admin-panel-company-info.php">Company info</a></div>
-      <div class="admin-menu-tile"><a href="admin-panel-websites.php">Websites</a></div>
-      <div class="admin-menu-tile"><a href="admin-panel-make-website.php">Make website</a></div>
-      <div class="admin-menu-tile"><a href="logout.php">Log out</a></div>
-    </div>
+    <?php require_once "../functions/PHP/makeLeftNavbar.php" ?>
     <div class="container-fluid text-center">
       <div class="row text-center">
         <div class="col-2"></div>
@@ -33,7 +27,7 @@
               </tr>
             </thead>
             <tbody>
-              <?php include "getBlogWebsites.php"; ?>
+              <?php include "../functions/PHP/getBlogWebsites.php"; ?>
             </tbody>
           </table>
         </div>
@@ -41,9 +35,9 @@
     </div>
     <?php include "footer.php"; ?>
     <!-- Navbar script-->
-    <script type="text/javascript" src="adminPanelNavbar.js"></script>
+    <script type="text/javascript" src="../../admin/functions/JS/adminPanelNavbar.js"></script>
 
     <!-- Bootstrap scripts-->
-    <script type="text/javascript" src="bootstrapScripts.js"></script>
+    <script type="text/javascript" src="../../content/functions/JS/bootstrapScripts.js"></script>
   </body>
 </html>

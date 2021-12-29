@@ -1,13 +1,13 @@
 <html lang="pl">
   <head>
     <?php require_once "header.php"; ?>
->   <title>PickBox - login page</title>
->   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.0.3/css/font-awesome.css" />
+   <title>PickBox - login page</title>
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.0.3/css/font-awesome.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
->   <link rel="stylesheet" href="style.css" />
->  </head>
+   <link rel="stylesheet" href="../../style.css" />
+ </head>
   <body>
-   <?php require_once "menu.php" ;?>
+   <?php require_once "../functions/PHP/menu.php" ;?>
     <div class="container-fluid text-center">
       <div class="row">
         <div class="col-12 col-md-6 contact-photo-div">
@@ -52,12 +52,7 @@
         </div>
       </div>
     </div>
-    <footer class="fixed-bottom">
-      <div class="footer-copyright text-center p-1">
-        © 2021 Copyright
-        <a href="index.php">PickBox</a>
-      </div>
-    </footer>
+    <?php require_once "../../footer.php" ?>
     <script
       src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
       integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
