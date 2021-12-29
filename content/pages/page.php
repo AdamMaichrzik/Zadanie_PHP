@@ -1,5 +1,8 @@
 <?php 
-require_once "../functions/PHP/getComponents.php"; ?>
+  session_start();
+  require_once "../functions/PHP/getComponents.php"; 
+  require_once "../functions/PHP/getCompanyInfo.php"; 
+?>
 
 <html lang="pl">
   <head>

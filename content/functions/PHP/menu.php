@@ -18,8 +18,12 @@ echo '
       
       echo '
       </div>
-      <div class="col-xs-2">
-        <a href="/Login-Page">Login</a>
+      <div class="col-xs-2">'
+      ;if (!isset($_SESSION['zalogowany']))
+      {
+        echo ' <a href="/Login-Page">Login</a>';
+      }
+      echo '
       </div>
     </nav>'
 ?>
