@@ -32,6 +32,14 @@ $result=mysqli_query($connect,"select * from pageInfo");
     $sql = $connect -> 
     query("UPDATE `pageInfo` SET `pageID`='$test',`pageTitle`='$pageTitle',`pageDesc`='$pageDesc',`pageIndex`='$pageIndex',`pageH1`='$pageH1',`pageH2`='$pageH2',`pageText`='$pageText' WHERE `pageID`='$test'");
   }
+  $result=mysqli_query($connect,"select * from dragdrop");
+
+  if(isset($_POST['updatePageInfoButton']))
+  {
+    //Sending data to DB
+    $deletePageFromMenu = '/blog/'.$test;
+    $sql = $connect -> query("UPDATE `dragdrop` SET `text` = '$pageTitle' WHERE href = '$deletePageFromMenu'");
+  }
 ?>
 
 
