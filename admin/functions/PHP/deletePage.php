@@ -18,6 +18,15 @@ $result=mysqli_query($connect,"select * from pageInfo");
     //Sending data to DB
     $sql = $connect -> query("DELETE FROM `pageInfo` WHERE pageID = '$deletePageID'");
   }
+
+  $result=mysqli_query($connect,"select * from dragdrop");
+
+  if(isset($_POST['deletePageButton']))
+  {
+    //Sending data to DB
+    $deletePageFromMenu = '/blog/'.$deletePageID;
+    $sql = $connect -> query("DELETE FROM `dragdrop` WHERE href = '$deletePageFromMenu'");
+  }
 ?>
 
 
