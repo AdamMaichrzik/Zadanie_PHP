@@ -40,7 +40,7 @@
                 <input required type="number" name="companyPhoneNumber" value="'.$companyPhoneNumber.'" id=""> <br>
                 <label>Company Email</label> <br>
                 <input required type="email" name="companyEmail" value="'.$companyEmail.'" id=""> <br>
-                <button name="updateCompanyInfoButton">Submit</button>
+                <button name="updateCompanyInfoButton">Update info</button>
                 </form>
                 '
             ?>
@@ -49,17 +49,7 @@
     </div>
     <?php require_once "footer.php"?>
     <!-- Navbar script-->
-    <script>
-      function openNav() {
-        document.getElementById("mySidebar").style.width = "189px";
-        document.getElementById("main").style.marginLeft = "189px";
-      }
-
-      function closeNav() {
-        document.getElementById("mySidebar").style.width = "0";
-        document.getElementById("main").style.marginLeft = "0";
-      }
-    </script>
+    <script src="../../admin/functions/JS/adminPanelNavbar.js"></script>
     <!-- Bootstrap scripts-->
     <script
       src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
