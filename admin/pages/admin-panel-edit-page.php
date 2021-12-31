@@ -36,7 +36,13 @@
                 <label>Page desc</label> <br>
                 <input type="text" name="pageDesc" value="'.$pageDesc.'" id=""> <br>
                 <label>Page index</label> <br>
-                <input type="text" name="pageIndex" value="'.$pageIndex.'" id=""> <br>
+                <select required name="pageIndex" >
+                  <option name="pageIndex">'.$pageIndex.'</option>
+                  <option name="pageIndex">index, follow</option>
+                  <option name="pageIndex">index, nofollow</option>
+                  <option name="pageIndex">noindex, follow</option>
+                  <option name="pageIndex">noindex, nofollow</option>
+                </select> <br>
                 <label>Page h1</label> <br>
                 <input type="text" name="pageH1" value="'.$pageH1.'"> <br>
                 <label>Page H2</label> <br>
