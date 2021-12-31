@@ -1,190 +1,54 @@
 <?php
 	session_start();
+  require_once "admin/functions/PHP/getMainPageInfo.php";
 ?>
 <html lang="pl">
   <head>
     <?php require_once "header.php" ?>
-    <title>PickBox</title>
+    <title><?php echo $mainTitle;?></title>
+    <meta name="description" content="<?php echo $mainDesc;?>">
     <link rel="stylesheet" href="style.css" />
+    <meta name="robots" content="<?php echo $mainIndex; ?>">
   </head>
 
   <body>
   <?php require_once "content/functions/PHP/menu.php" ;?>
     <div class="container-fluid text-center">
-      <div class="row">
+      <div class="row  mt-5">
         <div class="col">
-          <h2>Full width photo</h2>
-        </div>
-        <img
-          src="img/mountain-landscape.jpg"
-          alt="Sunny mountain landscape with lake"
-          class="img-fluid"
-          style="height: 80%; width: 100%; object-fit: cover"
-        />
-      </div>
-      <div class="row">
-        <div class="col">
-          <h2>Main H1 header</h2>
-          <h1 class="h1-header-text">Company name</h1>
+          <h1><?php echo $mainHeader;?></h1>
         </div>
       </div>
-      <div class="row" style="margin-top: 3%">
+      <div class="row  mt-5">
         <div class="col-12">
-          <h2>List of products</h2>
-        </div>
-        <div class="col-sm-6 col-md-4 col-lg-3">
-          <img
-            src="img/polaroid-photo.jpg"
-            alt="Polaroid camera"
-            style="
-              height: 233px;
-              width: 144px;
-              object-fit: cover;
-              -webkit-box-shadow: 0px 0px 30px -13px rgba(30, 30, 30, 1);
-              -moz-box-shadow: 0px 0px 30px -13px rgba(30, 30, 30, 1);
-              box-shadow: 0px 0px 30px -13px rgba(30, 30, 30, 1);
-            "
-          />
-          <h3>Product name</h3>
-          <p>Product desc</p>
-        </div>
-        <div class="col-sm-6 col-md-4 col-lg-3">
-          <img
-            src="img/small-car-photo.jpg"
-            alt="Small car"
-            style="
-              height: 233px;
-              width: 233px;
-              object-fit: cover;
-              border-radius: 50%;
-              -webkit-box-shadow: 0px 0px 30px -13px rgba(30, 30, 30, 1);
-              -moz-box-shadow: 0px 0px 30px -13px rgba(30, 30, 30, 1);
-              box-shadow: 0px 0px 30px -13px rgba(30, 30, 30, 1);
-            "
-          />
-          <h3>Product name</h3>
-          <p>Product desc</p>
-        </div>
-        <div class="col-sm-6 col-md-4 col-lg-3">
-          <img
-            src="img/plant-photo.jpg"
-            alt="Green plant in pot"
-            style="
-              height: 233px;
-              width: 144px;
-              object-fit: cover;
-              border-radius: 5%;
-              -webkit-box-shadow: 0px 0px 30px -13px rgba(30, 30, 30, 1);
-              -moz-box-shadow: 0px 0px 30px -13px rgba(30, 30, 30, 1);
-              box-shadow: 0px 0px 30px -13px rgba(30, 30, 30, 1);
-            "
-          />
-          <h3>Product name</h3>
-          <p>Product desc</p>
-        </div>
-        <div class="col-sm-6 col-md-4 col-lg-3">
-          <img
-            src="img/headphones-photo.jpg"
-            alt="Black headphones on yellow background"
-            style="
-              height: 233px;
-              width: 233px;
-              object-fit: cover;
-              border-radius: 50%;
-              object-position: right;
-              -webkit-box-shadow: 0px 0px 30px -13px rgba(30, 30, 30, 1);
-              -moz-box-shadow: 0px 0px 30px -13px rgba(30, 30, 30, 1);
-              box-shadow: 0px 0px 30px -13px rgba(30, 30, 30, 1);
-            "
-          />
-          <h3>Product name</h3>
-          <p>Product desc</p>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-12">
-          <h2>Three text areas</h2>
+          <h2><?php echo $secondHeader;?></h2>
         </div>
         <div class="col-sm-6 col-md-4">
-          <h2>100% happy customers</h2>
+          <h3><?php echo $firstPartHeader;?></h3>
           <p>
-            Distinctio a ipsum dicta necessitatibus consequatur beatae blanditiis eius dolorem laborum, facere labore
-            consequuntur ipsam dolorum soluta.
+          <?php echo $firstPartText;?>
           </p>
         </div>
         <div class="col-sm-6 col-md-4">
-          <h2>Best prices</h2>
+          <h3><?php echo $secondPartHeader;?></h3>
           <p>
-            Blanditiis eius dolorem laborum, facere labore consequuntur ipsam dolorum soluta fugit placeat cupiditate
-            reprehenderit nisi.
+          <?php echo $secondPartText;?>
           </p>
         </div>
         <div class="col-sm-6 col-md-4">
-          <h2>Free shiping</h2>
+          <h3><?php echo $thirdPartHeader;?></h3>
           <p>
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Distinctio a ipsum dicta necessitatibus
-            consequatur beatae blanditiis eius dolorem laborum.
+          <?php echo $thirdPartText;?>
           </p>
         </div>
       </div>
-      <div class="row">
+      <div class="row  mt-5">
         <div class="col-12">
-          <h2>Full width text</h2>
+          <h2><?php echo $thirdHeader;?></h2>
         </div>
         <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore vel illo quae quod distinctio numquam facere
-          enim vero sint reiciendis iure, accusamus dicta! Illum mollitia delectus illo earum natus nulla. Lorem ipsum
-          dolor sit amet consectetur adipisicing elit. Iure porro autem officia ducimus facilis ratione accusamus ipsam
-          ut error voluptatibus quibusdam odit quo, cum explicabo perspiciatis veritatis delectus illo iste?
+        <?php echo $fullWidthText;?>
         </p>
-      </div>
-      <div class="row">
-        <div class="col-12">
-          <h2>Opinions</h2>
-        </div>
-        <div class="col-sm-6 col-lg-6">
-          <img
-            src="img/opinion-photo.jpg"
-            alt="Woman with oranges in opinion photo"
-            class="img-fluid"
-            ;
-            style="
-              height: 300px;
-              width: 300px;
-              object-fit: cover;
-              border-radius: 50%;
-              -webkit-box-shadow: 0px 0px 30px -13px rgba(30, 30, 30, 1);
-              -moz-box-shadow: 0px 0px 30px -13px rgba(30, 30, 30, 1);
-              box-shadow: 0px 0px 30px -13px rgba(30, 30, 30, 1);
-            "
-          />
-          <h3>Natalie Smith</h3>
-          <p style="margin-top: 3%">
-            Doloremque itaque doloribus unde officia blanditiis provident porro. dolorum velit id ratione nesciunt,
-            incidunt beatae, blanditiis repudiandae dolore.
-          </p>
-        </div>
-        <div class="col-sm-6 col-lg-6">
-          <img
-            src="img/opinion-photo.jpg"
-            alt="Woman with oranges in opinion photo"
-            class="img-fluid"
-            style="
-              height: 300px;
-              width: 300px;
-              object-fit: cover;
-              border-radius: 50%;
-              -webkit-box-shadow: 0px 0px 30px -13px rgba(30, 30, 30, 1);
-              -moz-box-shadow: 0px 0px 30px -13px rgba(30, 30, 30, 1);
-              box-shadow: 0px 0px 30px -13px rgba(30, 30, 30, 1);
-            "
-          />
-          <h3>Natalie Smith</h3>
-          <p style="margin-top: 3%">
-            Doloremque itaque doloribus unde officia blanditiis provident porro. dolorum velit id ratione nesciunt,
-            incidunt beatae, blanditiis repudiandae dolore.
-          </p>
-        </div>
       </div>
     </div>
   <!-- Footer -->
