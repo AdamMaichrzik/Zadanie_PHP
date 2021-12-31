@@ -22,6 +22,8 @@ echo '
       ;if (!isset($_SESSION['zalogowany']))
       {
         echo ' <a href="/Login-Page">Login</a>';
+      } else {
+        echo ' <a href="/Admin-Panel">Panel</a>';
       }
       echo '
       </div>
