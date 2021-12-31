@@ -40,11 +40,3 @@ $result=mysqli_query($connect,"select * from mainPage");
     $sql = $connect -> query("UPDATE `dragdrop` SET `text` = '$mainTitle' WHERE id = 1");
   }
 ?>
-
-
-
-
- 
-
-
- 

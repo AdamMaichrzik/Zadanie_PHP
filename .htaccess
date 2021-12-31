@@ -7,6 +7,7 @@ RewriteRule Admin-Panel-Edit-Page admin/pages/admin-panel-edit-page.php
 RewriteRule Admin-Panel-Make-Website admin/pages/admin-panel-make-website.php
 RewriteRule Admin-Panel-Set-Menu admin/pages/admin-panel-set-menu.php
 RewriteRule Admin-Panel-Websites admin/pages/admin-panel-websites.php
+RewriteRule Admin-Panel-Edit-Main-Page admin/pages/admin-panel-edit-main-page.php
 RewriteRule Admin-Panel admin/pages/admin-panel.php
 
 RewriteRule Login-Page content/pages/login-page.php

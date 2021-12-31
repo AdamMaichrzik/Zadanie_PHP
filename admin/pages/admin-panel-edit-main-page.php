@@ -29,35 +29,40 @@
         <div id="website-project" class="col-10">
           <?php
           echo  '<form method="post">
-                <label>Page title</label> <br>
+                <label>Main page title</label> <br>
+                <input type="text" name="mainTitle" value="'.$mainTitle.'" id=""> <br>
+                <label>Main page description</label> <br>
+                <input type="text" name="mainDesc" value="'.$mainDesc.'" id=""> <br>
+                <label>Main page index</label> <br>
+                <select required name="mainIndex" >
+                  <option name="mainIndex">'.$mainIndex.'</option>
+                  <option name="mainIndex">index, follow</option>
+                  <option name="mainIndex">index, nofollow</option>
+                  <option name="mainIndex">noindex, follow</option>
+                  <option name="mainIndex">noindex, nofollow</option>
+                </select> <br>
+                <label>Main header</label> <br>
                 <input type="text" name="mainHeader" value="'.$mainHeader.'" id=""> <br>
-                <label>Page desc</label> <br>
+                <label>Second header</label> <br>
                 <input type="text" name="secondHeader" value="'.$secondHeader.'" id=""> <br>
-                <label>Page index</label> <br>
+                <label>First Part Header</label> <br>
                 <input type="text" name="firstPartHeader" value="'.$firstPartHeader.'" id=""> <br>
-                <label>Page h1</label> <br>
+                <label>First part text</label> <br>
+                <textarea name="firstPartText" style="height: 377px;" id="firstPartText"></textarea>
+                <label>Second Part Header</label> <br>
                 <input type="text" name="secondPartHeader" value="'.$secondPartHeader.'"> <br>
-                <label>Page H2</label> <br>
+                <label>Second part text</label> <br>
+                <textarea name="secondPartText" style="height: 377px;" id="secondPartText"></textarea>
+                <label>Third Part Header</label> <br>
                 <input type="text" name="thirdPartHeader" value="'.$thirdPartHeader.'" id=""> <br>
-                <label>Page H2</label> <br>
-                <input type="text" name="firstPartText" value="'.$firstPartText.'" id=""> <br>
-                <label>Page H2</label> <br>
-                <input type="text" name="secondPartText" value="'.$secondPartText.'" id=""> <br>
-                <label>Page H2</label> <br>
-                <input type="text" name="thirdPartText" value="'.$thirdPartText.'" id=""> <br>
+                <label>third part text</label> <br>
+                <textarea name="thirdPartText" style="height: 377px;" id="thirdPartText"></textarea>
                 <label>Page H2</label> <br>
                 <input type="text" name="thirdHeader" value="'.$thirdHeader.'" id=""> <br>
-                <label>Page H2</label> <br>
-                <input type="text" name="fullWidthText" value="'.$fullWidthText.'" id=""> <br>
-                <label>Page H2</label> <br>
-                <input type="text" name="mainTitle" value="'.$mainTitle.'" id=""> <br>
-                <label>Page H2</label> <br>
-                <input type="text" name="mainDesc" value="'.$mainDesc.'" id=""> <br>
-                <label>Page H2</label> <br>
-                <input type="text" name="mainIndex" value="'.$mainIndex.'" id=""> <br>
+                <label>Full width text</label> <br>
+                <textarea name="fullWidthText" style="height: 377px;" id="fullWidthTextArea"></textarea>
                 <label>Page text</label> <br>
-                <textarea name="pageText" style="height: 377px;" id="myTextarea"></textarea>
-                <button onclick="return confirm('.$question.')" name="updateMainPageInfoButton">Update page</button>
+                <button onclick="return confirm('.$question.')" name="updateMainPageInfoButton">Update main page</button>
                 </form>
                 '
             ?>
@@ -65,13 +70,40 @@
       </div>
     </div>
     <?php require_once "footer.php" ?>
-    <?php $trimmer = trim(preg_replace('/\s+/', ' ', $pageText)); ?>
+    <?php $trimmer1 = trim(preg_replace('/\s+/', ' ', $firstPartText)); ?>
+    <?php $trimmer2 = trim(preg_replace('/\s+/', ' ', $secondPartText)); ?>
+    <?php $trimmer3 = trim(preg_replace('/\s+/', ' ', $thirdPartText)); ?>
+    <?php $trimmer4 = trim(preg_replace('/\s+/', ' ', $fullWidthText)); ?>
     <script>
       tinymce.init({
-          selector: '#myTextarea',
+          selector: '#firstPartText',
           setup: function (editor) {
             editor.on('init', function (e) {
-              editor.setContent('<?php echo $trimmer; ?>');
+              editor.setContent('<?php echo $trimmer1; ?>');
+            });
+          }
+        });
+      tinymce.init({
+          selector: '#secondPartText',
+          setup: function (editor) {
+            editor.on('init', function (e) {
+              editor.setContent('<?php echo $trimmer2; ?>');
+            });
+          }
+        });
+      tinymce.init({
+          selector: '#thirdPartText',
+          setup: function (editor) {
+            editor.on('init', function (e) {
+              editor.setContent('<?php echo $trimmer3; ?>');
+            });
+          }
+        });
+      tinymce.init({
+          selector: '#fullWidthTextArea',
+          setup: function (editor) {
+            editor.on('init', function (e) {
+              editor.setContent('<?php echo $trimmer4; ?>');
             });
           }
         });

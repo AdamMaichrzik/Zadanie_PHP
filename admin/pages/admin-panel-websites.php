@@ -36,24 +36,21 @@
             <tr>
             <th scope="row">
             <form method="post">
-                <input style="border: none; outline: none; background-color: #e8e8e8; text-align: center" readonly="readonly" type="text" name="deletePageID" value="'.$pageTitlesID[$i].'"> 
+                <input style="border: none; outline: none; background-color: #e8e8e8; text-align: center" readonly="readonly" type="text" value="1"> 
             <br>
             </th>
-            <td>1</td>
+            <td>Main Page</td>
             <td>
             <a href="/index.php" target="_blank">
                 <button type="button" class="btn btn-primary">Show</button>
             </a>
             </td>
             <td>
-            <a href="../../admin/pages/admin-panel-edit-main-page.php" target="_blank">
+            <a href="/Admin-Panel-Edit-Main-Page" target="_blank">
                 <button name="editPageButton" type="button" class="btn btn-warning">Edit</button>
             </a>
             </td>
-            <td>
-                <button class="btn btn-danger" onclick="return confirm('.$question.')" name="deletePageButton">Delete</button>
             </form>
-            </td>
             </tr>
               <?php include "../functions/PHP/getBlogWebsites.php"; ?>
             </tbody>
