@@ -1,7 +1,7 @@
 <html lang="pl">
   <head>
     <?php require_once "header.php"; ?>
-   <title>PickBox - login page</title>
+   <title>PickBox - Contact page</title>
    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.0.3/css/font-awesome.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
    <link rel="stylesheet" href="../../style.css" />
@@ -15,10 +15,11 @@
         </div>
         <div class="col-12 col-md-6">
           <div class="contact-form-box">
-            <form action="" method="get">
+            <form action="" method="post">
               <label class="form-label" for="">Send us a message</label>
               <br>
               <input
+                required
                 placeholder="Name"
                 class="contact-form-input"
                 type="text"
@@ -26,6 +27,7 @@
                 id=""
               />
               <input
+              required
                 placeholder="E-mail"
                 class="contact-form-input"
                 type="email"
@@ -33,6 +35,7 @@
                 id=""
               />
               <textarea
+                required
                 placeholder="Your message"
                 class="contact-form-input"
                 name="contact-form-message"
@@ -43,10 +46,8 @@
                 style="resize: none"
               ></textarea>
               <br />
-              <button type="button" class="btn btn-primary">
-                <i class="fa fa-send"></i>
-                Send
-              </button>
+              <input type="submit">
+              </input>
             </form>
           </div>
         </div>
