@@ -1,3 +1,6 @@
+<?php
+	session_start();
+?>
 <html lang="pl">
   <head>
     <?php require_once "header.php"; ?>
