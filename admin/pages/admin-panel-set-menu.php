@@ -84,7 +84,7 @@ $(document).ready(function(){
             $id=$row['id'];
             $text=$row['text'];
               ?>
-              <li id="arrayorder_<?php echo $id ?>"> <?php echo $text; ?>
+              <li style="cursor: pointer;" id="arrayorder_<?php echo $id ?>"> <?php echo $text; ?>
                 <div class="clear"></div>
               </li>
               <?php } ?>
