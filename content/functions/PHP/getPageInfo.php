@@ -23,6 +23,7 @@ $result=mysqli_query($connect,"select * from pageInfo WHERE pageID = '$test'");
 while($row=mysqli_fetch_array($result))
 {
  $pageTitle = $row['pageTitle'];
+ $pageTitleSEO = $row['pageTitleSEO'];
  $pageDesc = $row['pageDesc'];
  $pageIndex = $row['pageIndex'];
  $pageH1 = $row['pageH1'];

@@ -14,6 +14,7 @@
 	while($row=mysqli_fetch_array($result))
 	{
 	$page_title = $_SESSION['pageTitle'] = $row['pageTitle'];
+	$page_title_SEO = $_SESSION['pageTitleSEO'] = $row['pageTitleSEO'];
 	$page_desc = $_SESSION['pageDesc'] = $row['pageDesc'];
 	$page_index = $_SESSION['pageIndex'] = $row['pageIndex'];
 	$page_H1 = $_SESSION['pageH1'] = $row['pageH1'];

@@ -7,7 +7,7 @@
 <html lang="pl">
   <head>
     <?php require_once "header.php" ?>
-    <title> <?php echo ($page_title." - ".$companyName); ?> </title>
+    <title> <?php echo ($page_title_SEO." - ".$companyName); ?> </title>
     <meta name="description" content="<?php echo $page_desc; ?>">
     <meta name="robots" content="<?php echo $page_index; ?>">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.0.3/css/font-awesome.css" />
