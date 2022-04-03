@@ -31,6 +31,8 @@
           echo  '<form method="post">
                 <label>Main page title</label> <br>
                 <input type="text" name="mainTitle" value="'.$mainTitle.'" id=""> <br>
+                <label>Main page SEO title</label> <br>
+                <input type="text" name="mainTitleSEO" value="'.$mainTitleSEO.'" id=""> <br>
                 <label>Main page description</label> <br>
                 <input type="text" name="mainDesc" value="'.$mainDesc.'" id=""> <br>
                 <label>Main page index</label> <br>

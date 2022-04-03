@@ -25,6 +25,7 @@ while($row=mysqli_fetch_array($result))
  $thirdHeader = $row['thirdHeader'];
  $fullWidthText = $row['fullWidthText'];
  $mainTitle = $row['mainTitle'];
+ $mainTitleSEO = $row['mainTitleSEO'];
  $mainDesc = $row['mainDesc'];
  $mainIndex = $row['mainIndex'];
 }

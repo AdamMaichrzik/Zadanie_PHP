@@ -18,6 +18,7 @@ if(mysqli_connect_errno($connect))
    echo 'Failed to connect to database: '.mysqli_connect_error();
 }
 $pageTitle = isset($_POST['pageTitle']) ? $_POST['pageTitle'] : '';
+$pageTitleSEO = isset($_POST['pageTitleSEO']) ? $_POST['pageTitleSEO'] : '';
 $pageDesc = isset($_POST['pageDesc']) ? $_POST['pageDesc'] : '';
 $pageIndex = isset($_POST['pageIndex']) ? $_POST['pageIndex'] : '';
 $pageH1 = isset($_POST['pageH1']) ? $_POST['pageH1'] : '';
@@ -30,7 +31,7 @@ $result=mysqli_query($connect,"select * from pageInfo");
   {
     //Sending data to DB
     $sql = $connect -> 
-    query("UPDATE `pageInfo` SET `pageID`='$test',`pageTitle`='$pageTitle',`pageDesc`='$pageDesc',`pageIndex`='$pageIndex',`pageH1`='$pageH1',`pageH2`='$pageH2',`pageText`='$pageText' WHERE `pageID`='$test'");
+    query("UPDATE `pageInfo` SET `pageID`='$test',`pageTitle`='$pageTitle',`pageTitleSEO`='$pageTitleSEO',`pageDesc`='$pageDesc',`pageIndex`='$pageIndex',`pageH1`='$pageH1',`pageH2`='$pageH2',`pageText`='$pageText' WHERE `pageID`='$test'");
   }
   $result=mysqli_query($connect,"select * from dragdrop");
 

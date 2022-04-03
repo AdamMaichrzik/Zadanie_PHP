@@ -33,6 +33,8 @@
                 <input readonly="readonly" type="text" name="deletePageID" value="'.$params['pageID'].'"> <br>
                 <label>Page title</label> <br>
                 <input type="text" name="pageTitle" value="'.$pageTitle.'" id=""> <br>
+                <label>Page SEO title</label> <br>
+                <input type="text" name="pageTitleSEO" value="'.$pageTitleSEO.'" id=""> <br>
                 <label>Page desc</label> <br>
                 <input type="text" name="pageDesc" value="'.$pageDesc.'" id=""> <br>
                 <label>Page index</label> <br>
