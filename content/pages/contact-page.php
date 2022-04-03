@@ -1,5 +1,8 @@
 <?php
 	session_start();
+  include "../../content/functions/PHP/getCompanyInfo.php";
+
+  $companyInfoGoogleMaps = $companyPostalCode.$companyCityName.$companyStreet;
 ?>
 <html lang="pl">
   <head>
@@ -54,6 +57,9 @@
             </form>
           </div>
         </div>
+      </div>
+      <div class="row mb-5">
+        <iframe width="100%" height="480" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.it/maps?q=<?php echo $companyInfoGoogleMaps;?>&output=embed"></iframe>
       </div>
     </div>
     <?php require_once "../../footer.php" ?>
