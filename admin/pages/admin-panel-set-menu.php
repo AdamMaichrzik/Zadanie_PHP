@@ -7,6 +7,9 @@
 		header('Location: Login-Page');
 		exit();
 	}
+
+  require_once "../../content/functions/PHP/menu.php";
+  require_once "../functions/PHP/makeLeftNavbar.php";
 ?>
 <html lang="pl">
   <head>
@@ -61,13 +64,11 @@ $(document).ready(function(){
 </script>
   </head>
   <body>
-    <?php require_once "../../content/functions/PHP/menu.php"?>
-    <div class="container-fluid"></div>
-    <?php require_once "../functions/PHP/makeLeftNavbar.php" ?>
-    <div class="container-fluid text-center">
+    <div class="container-fluid text-center" style="margin: 30px 0px;">
       <div class="row text-center">
         <div class="col-2"></div>
-        <div id="website-project" class="col-10">
+        <div id="website-project" class="col-8">
+          <div style="margin: 21px 0px; text-align: center;">To set the menu just drag and drop website titles </div>
           <div id="container" style="width:300px; margin-left: 300px">
           <div id="list">
           <div id="response"> </div>
@@ -92,6 +93,7 @@ $(document).ready(function(){
           </div>
           </div>
         </div>
+        <div class="col-2"></div>
       </div>
     </div>
     <?php require_once "footer.php" ?>
