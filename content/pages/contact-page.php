@@ -16,6 +16,22 @@
    <?php require_once "../functions/PHP/menu.php" ;?>
     <div class="container-fluid text-center">
       <div class="row">
+        <h2 style="width: 100%; text-align:center;" >Zapraszamy do kontaktu z naszą firmą</h2>
+        <div class="col-12 col-md-6">
+          Dane firmy <br>
+          <?php echo $companyName; ?> </br>
+          <?php echo $companyNIP; ?> </br>
+        </div>
+        <div class="col-12 col-md-6">
+          Kontakt <br>
+          <?php echo $companyCityName; ?> </br>
+          <?php echo $companyPostalCode; ?> </br>
+          <?php echo $companyStreet; ?> </br>
+         <?php echo ' <a href="tel:'.$companyPhoneNumber.'">'.$companyPhoneNumber.'</a> <br/> '?>
+         <?php echo ' <a href="mailto:'.$companyEmail.'">'.$companyEmail.'</a> <br/> ' ?>
+        </div>
+      </div>
+      <div class="row">
         <div class="col-12 col-md-6 contact-photo-div">
           <img src="img/contact-photo.jpg" class="img-fluid contact-photo" alt="" />
         </div>
@@ -59,6 +75,7 @@
         </div>
       </div>
       <div class="row mb-5">
+        <h2 style="width:100%; text-align:center;">Jak dojechać do naszej firmy?</h2>
         <iframe width="100%" height="480" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.it/maps?q=<?php echo $companyInfoGoogleMaps;?>&output=embed"></iframe>
       </div>
     </div>
