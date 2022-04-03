@@ -16,8 +16,8 @@
     <div class="col-md-6">
       <h2>Contact</h2>
       <p>
-        '.$companyPhoneNumber.' <br />
-        '.$companyEmail.' <br />
+        <a href="tel:'.$companyPhoneNumber.'">'.$companyPhoneNumber.'</a> <br/>
+        <a href="mailto:'.$companyEmail.'">'.$companyEmail.'</a> <br/>
       </p>
     </div>
   </div>
