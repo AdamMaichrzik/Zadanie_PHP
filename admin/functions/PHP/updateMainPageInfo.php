@@ -20,6 +20,7 @@ $thirdPartText = isset($_POST['thirdPartText']) ? $_POST['thirdPartText'] : '';
 $thirdHeader = isset($_POST['thirdHeader']) ? $_POST['thirdHeader'] : '';
 $fullWidthText = isset($_POST['fullWidthText']) ? $_POST['fullWidthText'] : '';
 $mainTitle = isset($_POST['mainTitle']) ? $_POST['mainTitle'] : '';
+$mainTitleSEO = isset($_POST['mainTitleSEO']) ? $_POST['mainTitleSEO'] : '';
 $mainDesc = isset($_POST['mainDesc']) ? $_POST['mainDesc'] : '';
 $mainIndex = isset($_POST['mainIndex']) ? $_POST['mainIndex'] : '';
 
@@ -30,7 +31,7 @@ $result=mysqli_query($connect,"select * from mainPage");
   {
     //Sending data to DB
     $sql = $connect -> 
-    query("UPDATE `mainPage` SET `mainHeader`='$mainHeader',`secondHeader`='$secondHeader',`firstPartHeader`='$firstPartHeader',`secondPartHeader`='$secondPartHeader',`thirdPartHeader`='$thirdPartHeader',`firstPartText`='$firstPartText',`secondPartText`='$secondPartText',`thirdPartText`='$thirdPartText',`thirdHeader`='$thirdHeader',`fullWidthText`='$fullWidthText',`mainTitle`='$mainTitle',`mainDesc`='$mainDesc',`mainIndex`='$mainIndex' WHERE 1");
+    query("UPDATE `mainPage` SET `mainHeader`='$mainHeader',`secondHeader`='$secondHeader',`firstPartHeader`='$firstPartHeader',`secondPartHeader`='$secondPartHeader',`thirdPartHeader`='$thirdPartHeader',`firstPartText`='$firstPartText',`secondPartText`='$secondPartText',`thirdPartText`='$thirdPartText',`thirdHeader`='$thirdHeader',`fullWidthText`='$fullWidthText',`mainTitle`='$mainTitle',`mainTitleSEO`='$mainTitleSEO',`mainDesc`='$mainDesc',`mainIndex`='$mainIndex' WHERE 1");
   }
   $result=mysqli_query($connect,"select * from dragdrop");
 

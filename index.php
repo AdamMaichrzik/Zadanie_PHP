@@ -5,7 +5,7 @@
 <html lang="pl">
   <head>
     <?php require_once "header.php" ?>
-    <title><?php echo $mainTitle;?></title>
+    <title><?php echo $mainTitleSEO;?></title>
     <meta name="description" content="<?php echo $mainDesc;?>">
     <link rel="stylesheet" href="style.css" />
     <meta name="robots" content="<?php echo $mainIndex; ?>">
