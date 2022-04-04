@@ -19,7 +19,7 @@
     <link rel="stylesheet" href="../../style.css" />
     <script src="https://cdn.tiny.cloud/1/gbmty4rjniqtzpcgafpxoh68y4emgqle7i7uzry55fqkhqio/tinymce/5/tinymce.min.js" referrerpolicy="origin"></script>
   </head>
-  <body>
+  <body onload="seoTitleAndDescCountChars();">
     <?php require_once "../../content/functions/PHP/menu.php"; ?>
     <div class="container-fluid"></div>
     <?php require_once "../functions/PHP/makeLeftNavbar.php" ?>
@@ -32,9 +32,11 @@
                 <label>Main page title</label> <br>
                 <input type="text" name="mainTitle" value="'.$mainTitle.'" id=""> <br>
                 <label>Main page SEO title</label> <br>
-                <input type="text" name="mainTitleSEO" value="'.$mainTitleSEO.'" id=""> <br>
+                <p id="charTitleNum">0 characters</p>
+                <input id="mainTitleSEO" onkeyup="countTitleChars(this);" type="text" name="mainTitleSEO" value="'.$mainTitleSEO.'" id=""> <br>
                 <label>Main page description</label> <br>
-                <input type="text" name="mainDesc" value="'.$mainDesc.'" id=""> <br>
+                <p id="charDescNum">0 characters</p>
+                <input id="mainDescSEO" onkeyup="countDescChars(this);" type="text" name="mainDesc" value="'.$mainDesc.'" id=""> <br>
                 <label>Main page index</label> <br>
                 <select required name="mainIndex" >
                   <option name="mainIndex">'.$mainIndex.'</option>
@@ -72,6 +74,43 @@
       </div>
     </div>
     <?php require_once "footer.php" ?>
+    <script>
+      function countTitleChars(obj){
+        document.getElementById("charTitleNum").innerHTML = obj.value.length+' / 120 characters';
+        if(obj.value.length < 120){
+          document.getElementById("charTitleNum").style.color = "green";
+        } else if(obj.value.length > 120){
+          document.getElementById("charTitleNum").style.color = "red";
+        }
+
+      }
+
+      function countDescChars(obj){
+        document.getElementById("charDescNum").innerHTML = obj.value.length+' / 240 characters';
+        if(obj.value.length < 240){
+          document.getElementById("charDescNum").style.color = "green";
+        } else if(obj.value.length > 240){
+          document.getElementById("charDescNum").style.color = "red";
+        }
+
+      }
+
+      function seoTitleAndDescCountChars(){
+        document.getElementById("charTitleNum").innerHTML = document.getElementById("mainTitleSEO").value.length+' / 120 characters';
+        if(document.getElementById("mainTitleSEO").value.length < 120){
+          document.getElementById("charTitleNum").style.color = "green";
+        } else if(document.getElementById("mainTitleSEO").value.length > 120){
+          document.getElementById("charTitleNum").style.color = "red";
+        }
+
+        document.getElementById("charDescNum").innerHTML = document.getElementById("mainDescSEO").value.length+' / 240 characters';
+        if(document.getElementById("mainDescSEO").value.length < 240){
+          document.getElementById("charDescNum").style.color = "green";
+        } else if(document.getElementById("mainDescSEO").value.length > 240){
+          document.getElementById("charDescNum").style.color = "red";
+        }
+      }
+    </script>
     <?php $trimmer1 = trim(preg_replace('/\s+/', ' ', $firstPartText)); ?>
     <?php $trimmer2 = trim(preg_replace('/\s+/', ' ', $secondPartText)); ?>
     <?php $trimmer3 = trim(preg_replace('/\s+/', ' ', $thirdPartText)); ?>
