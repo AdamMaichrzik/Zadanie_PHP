@@ -9,6 +9,7 @@ if(mysqli_connect_errno($connect))
    echo 'Failed to connect to database: '.mysqli_connect_error();
 }
 $pageTitle = isset($_POST['pageTitle']) ? $_POST['pageTitle'] : '';
+$pageTitleSEO = isset($_POST['pageTitleSEO']) ? $_POST['pageTitleSEO'] : '';
 $pageDesc = isset($_POST['pageDesc']) ? $_POST['pageDesc'] : '';
 $pageIndex = isset($_POST['pageIndex']) ? $_POST['pageIndex'] : '';
 $pageH1 = isset($_POST['pageH1']) ? $_POST['pageH1'] : '';
@@ -22,8 +23,8 @@ $result=mysqli_query($connect,"select * from pageInfo");
   {
     //Sending data to DB
     $sql = $connect -> 
-    query("INSERT INTO `pageInfo`(`pageTitle`, `pageDesc`, `pageIndex`, `pageH1`, `pageH2`, `pageText`) 
-    VALUES ('$pageTitle','$pageDesc','$pageIndex','$pageH1','$pageH2','$pageText')");
+    query("INSERT INTO `pageInfo`(`pageTitle`, `pageDesc`,`pageTitleSEO`,`pageIndex`, `pageH1`, `pageH2`, `pageText`) 
+    VALUES ('$pageTitle','$pageTitleSEO','$pageDesc','$pageIndex','$pageH1','$pageH2','$pageText')");
   }
 
   $result=mysqli_query($connect,"select * from dragdrop");

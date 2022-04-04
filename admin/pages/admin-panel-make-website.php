@@ -19,7 +19,7 @@
   <link rel="stylesheet" href="../../style.css" />
   <script src="https://cdn.tiny.cloud/1/gbmty4rjniqtzpcgafpxoh68y4emgqle7i7uzry55fqkhqio/tinymce/5/tinymce.min.js" referrerpolicy="origin"></script>
 </head>
-<body>
+<body onload="seoTitleAndDescCountChars();">
 <?php require_once "../../content/functions/PHP/menu.php"; ?>
 
     <div class="container-fluid"></div>
@@ -33,8 +33,12 @@
           echo  '<form method="post">
                 <label>Page title</label> <br>
                 <input required type="text" name="pageTitle"> <br>
+                <label>Page SEO title</label> <br>
+                <p id="charTitleNum">0 characters</p>
+                <input id="mainTitleSEO" onkeyup="countTitleChars(this);" type="text" name="pageTitleSEO" value="'.$pageTitleSEO.'" id=""> <br>
                 <label>Page desc</label> <br>
-                <input required type="text" name="pageDesc"> <br>
+                <p id="charDescNum">0 characters</p>
+                <input id="mainDescSEO" onkeyup="countDescChars(this);" type="text" name="pageDesc" value="'.$pageDesc.'" id=""> <br>
                 <label>Page index</label> <br>
                 <select required name="pageIndex">
                   <option>index, follow</option>
@@ -56,6 +60,43 @@
       </div>
     </div>
     <?php require_once "footer.php" ?>
+    <script>
+      function countTitleChars(obj){
+        document.getElementById("charTitleNum").innerHTML = obj.value.length+' / 120 characters';
+        if(obj.value.length < 120){
+          document.getElementById("charTitleNum").style.color = "green";
+        } else if(obj.value.length > 120){
+          document.getElementById("charTitleNum").style.color = "red";
+        }
+
+      }
+
+      function countDescChars(obj){
+        document.getElementById("charDescNum").innerHTML = obj.value.length+' / 240 characters';
+        if(obj.value.length < 240){
+          document.getElementById("charDescNum").style.color = "green";
+        } else if(obj.value.length > 240){
+          document.getElementById("charDescNum").style.color = "red";
+        }
+
+      }
+
+      function seoTitleAndDescCountChars(){
+        document.getElementById("charTitleNum").innerHTML = document.getElementById("mainTitleSEO").value.length+' / 120 characters';
+        if(document.getElementById("mainTitleSEO").value.length < 120){
+          document.getElementById("charTitleNum").style.color = "green";
+        } else if(document.getElementById("mainTitleSEO").value.length > 120){
+          document.getElementById("charTitleNum").style.color = "red";
+        }
+
+        document.getElementById("charDescNum").innerHTML = document.getElementById("mainDescSEO").value.length+' / 240 characters';
+        if(document.getElementById("mainDescSEO").value.length < 240){
+          document.getElementById("charDescNum").style.color = "green";
+        } else if(document.getElementById("mainDescSEO").value.length > 240){
+          document.getElementById("charDescNum").style.color = "red";
+        }
+      }
+    </script>
   <script src="../../admin/functions/JS/createTinyMCE.js"></script>
   <script src="../../admin/functions/JS/adminPanelNavbar.js"></script>
 
