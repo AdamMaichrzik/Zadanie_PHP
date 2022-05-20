@@ -12,7 +12,7 @@
 ?>
 <html lang="pl">
   <head>
-    <?php require_once "header.php" ?>
+    <?php require_once "../../header.php" ?>
     <title>PickBox - company info</title>
     <link rel="stylesheet" href="../../style.css" />
   </head>
@@ -47,9 +47,9 @@
         </div>
       </div>
     </div>
-    <?php require_once "footer.php"?>
+    <?php require_once "../../footer.php"?>
     <!-- Navbar script-->
-    <script src="../../admin/functions/JS/adminPanelNavbar.js"></script>
+    <script type="text/javascript" src="../../admin/functions/JS/adminPanelNavbar.js"></script>
     <!-- Bootstrap scripts-->
     <script
       src="https://code.jquery.com/jquery-3.2.1.slim.min.js"

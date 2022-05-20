@@ -13,7 +13,7 @@
 <!DOCTYPE HTML>
 <html lang="pl">
   <head>
-    <?php require_once "header.php"; ?>
+    <?php require_once "../../header.php"; ?>
     <title>PickBox - login page</title>
     <link rel="stylesheet" href="../../style.css" />
   </head>
@@ -33,7 +33,7 @@
         </div>
       </div>
     </div>
-    <?php require_once "footer.php"; ?>
+    <?php require_once "../../footer.php"; ?>
     <script
       src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
       integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"

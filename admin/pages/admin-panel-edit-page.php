@@ -1,6 +1,9 @@
 <?php
-
 	session_start();
+
+  ini_set('display_errors', 1);
+  ini_set('display_startup_errors', 1);
+  error_reporting(E_ALL);
 	
 	if (!isset($_SESSION['zalogowany']))
 	{
@@ -8,21 +11,22 @@
 		exit();
 	}
     include "../functions/PHP/updatePageInfo.php";
+
     include "../../content/functions/PHP/getPageInfo.php";
     $question = "'Are you sure?'";
 ?>
 <!DOCTYPE html>
 <html lang="pl">
   <head>
-    <?php require_once "header.php"; ?>
+    <?php require_once "../../header.php"; ?>
     <title>PickBox - edit page</title>
     <link rel="stylesheet" href="../../style.css" />
     <script src="https://cdn.tiny.cloud/1/gbmty4rjniqtzpcgafpxoh68y4emgqle7i7uzry55fqkhqio/tinymce/5/tinymce.min.js" referrerpolicy="origin"></script>
   </head>
   <body onload="seoTitleAndDescCountChars();">
-    <?php require_once "../../content/functions/PHP/menu.php"; ?>
+    <?php require_once "../../content/functions/PHP/menu.php" ?>
     <div class="container-fluid"></div>
-    <?php require_once "../functions/PHP/makeLeftNavbar.php" ?>
+    <?php require_once "../functions/PHP/makeLeftNavbar.php"?>
     <div class="container-fluid text-center">
       <div class="row text-center">
         <div class="col-2"></div>
@@ -60,7 +64,7 @@
         </div>
       </div>
     </div>
-    <?php require_once "footer.php" ?>
+    <?php require_once "../../footer.php" ?>
     <script>
       function countTitleChars(obj){
         document.getElementById("charTitleNum").innerHTML = obj.value.length+' / 120 characters';
@@ -109,8 +113,8 @@
           }
         });
     </script>
-    <script src="../../admin/functions/JS/createTinyMCE.js"></script>
-    <script src="../../admin/functions/JS/adminPanelNavbar.js"></script>
+    <script src="../functions/JS/createTinyMCE.js"></script>
+    <script type="text/javascript" src="../../admin/functions/JS/adminPanelNavbar.js"></script>
     <!-- Bootstrap scripts-->
     <script
       src="https://code.jquery.com/jquery-3.2.1.slim.min.js"

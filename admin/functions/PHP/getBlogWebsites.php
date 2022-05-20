@@ -1,13 +1,7 @@
 <?php 
-require_once "connect.php";
+require_once "../../../connect.php";
 //create connection
 $connect= new mysqli($host, $db_user, $db_password, $db_name);
-
-//check connection
-if(mysqli_connect_errno($connect))
-{
-   echo 'Failed to connect to database: '.mysqli_connect_error();
-}
 
 $result=mysqli_query($connect,"select * from pageInfo");
 $question = "'Are you sure?'";

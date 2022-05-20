@@ -1,5 +1,5 @@
 <?php 
-    require "content/functions/PHP/getCompanyInfo.php";
+    require_once '/content/functions/PHP/getCompanyInfo.php';
     echo '
         <meta charset="UTF-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />

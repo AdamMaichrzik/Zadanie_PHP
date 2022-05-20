@@ -13,7 +13,7 @@
 ?>
 <html lang="pl">
   <head>
-    <?php require_once "header.php" ?>
+    <?php require_once "../../header.php" ?>
     <title>PickBox - set menu</title>
     <link rel="stylesheet" href="../../style.css" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
@@ -74,7 +74,7 @@ $(document).ready(function(){
           <div id="response"> </div>
             <ul>
               <?php
-          require_once "connect.php";
+          require_once "../../connect.php";
           //create connection
           $connect= new mysqli($host, $db_user, $db_password, $db_name);
           if ($connect->connect_error) {
@@ -96,7 +96,7 @@ $(document).ready(function(){
         <div class="col-2"></div>
       </div>
     </div>
-    <?php require_once "footer.php" ?>
+    <?php require_once "../../footer.php" ?>
     <!-- Navbar script-->
    <script type="text/javascript" src="../../admin/functions/JS/adminPanelNavbar.js"></script>
     <!-- Bootstrap scripts-->

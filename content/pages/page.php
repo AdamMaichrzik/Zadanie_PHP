@@ -1,12 +1,15 @@
 <?php 
   session_start();
+  ini_set('display_errors', 1);
+  ini_set('display_startup_errors', 1);
+  error_reporting(E_ALL);
   require_once "../functions/PHP/getComponents.php"; 
   require_once "../functions/PHP/getCompanyInfo.php"; 
 ?>
 
 <html lang="pl">
   <head>
-    <?php require_once "header.php" ?>
+    <?php require_once "../../header.php" ?>
     <title> <?php echo ($page_title_SEO." - ".$companyName); ?> </title>
     <meta name="description" content="<?php echo $page_desc; ?>">
     <meta name="robots" content="<?php echo $page_index; ?>">
@@ -29,7 +32,7 @@
     </div>
     <!-- Footer -->
     <?php 
-      require_once "footer.php";
+      require_once "../../footer.php";
     ?>
     <script
       src="https://code.jquery.com/jquery-3.2.1.slim.min.js"

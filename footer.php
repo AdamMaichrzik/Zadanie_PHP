@@ -1,5 +1,5 @@
 <?php
-  require_once "content/functions/PHP/getCompanyInfo.php";
+  require_once "/content/functions/PHP/getCompanyInfo.php";
   echo '<footer>
   <div class="container">
   <div class="row text-center" style="margin: 0;">

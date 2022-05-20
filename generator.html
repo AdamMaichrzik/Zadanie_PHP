@@ -1,0 +1,154 @@
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Code generator</title>
+</head>
+<body style="background-color: #1B3D63; color: #FBFBFD;">
+   <style>
+      input{
+         border-radius: 8px;
+         padding: 3px;
+         margin-bottom: 5px;
+      }
+      label{
+         margin-bottom: 5xp;
+      }
+      #leftColumn{
+         padding-left: 21px;
+      }
+   </style>
+
+   <div id="leftColumn" style="width:50%; float:left;">
+      <div id="alert">Fill all the inputs</div>
+      <label>Brand name</label value=" - "> <br>
+      <input type='text' id="brandName" /> <br>
+      <label>Mail title</label> <br>
+      <input size="130" type='text' id="mainTitle" /> <br>
+      <label>Main desc</label> <br>
+      <input size="130" type='text' id="mainDesc" /> <br>
+      <button onclick="addMainInfo();">Add main info</button> <br> <br> <br>
+      
+      
+      <label>Next url</label> <br>
+      <input type='text' id="anotherWebsiteUrl" /> <br>
+      <label>Next title</label> <br>
+      <input size="130" type='text' id='anotherWebsiteTitle' /> <br>
+      <label>Next desc</label> <br>
+      <input size="130" type='text' id='anotherWebsiteDesc' /> <br>
+      
+      <button onclick="addAnotherWebsite();">Another website</button> <br> <br> <br>
+      
+      <label>Type GA code</label> <br>
+      <input type="text" id='GAcode'/> <br>
+      <button onclick="addGAcode();">Add GA code</button> <br> <br>
+
+      <label>Type GTM code</label> <br>
+      <input type="text" id='GSCcode'/> <br>
+      <button onclick="addGSCcode();">Add GSC code</button> <br> <br>
+
+      <label>Add JSON code without script tags</label> <br>
+      <textarea type="text" style="width: 80%;" rows="10" id='JSONcode'></textarea> <br>
+      <button onclick="addJSONcode();">Add JSON code</button> <br> <br>
+   </div>
+
+      <div id="rightColumn" style="width:45%; float:left;">
+         <h3>Final code</h3>
+         <div style="text-align: left">
+            <p>
+               global $_TITLE; <br>
+               global $_DESC; <br>
+               global $_BRAND; <br>
+               global $_GSC_HEAD; <br>
+               global $_GSC_BODY; <br>
+               global $_GA; <br>
+               global $_JSON; <br>
+               $_URI = $_SERVER['REQUEST_URI']; <br>
+               remove_theme_support('title-tag'); <br>
+            </p>
+            <p id="finalCode">        
+               
+               </p>
+               
+               <p>
+                  else{ <br>
+                     $_TITLE = get_the_title(); <br>
+                     $_DESC = ""; <br>
+                  } <br>
+               </p>
+               <p id="gaDiv">
+                  
+               </p>
+               <p id="GSCdiv">
+
+               </p>
+
+               <p>
+                  $_JSON = ' <br>
+                  &lt;script type="application/ld+json">
+                     <p style="white-space: pre;" id="JSONdiv"></p>
+                  &lt;/script>';
+               </p>
+
+               </div>
+               
+      </div>
+   
+
+   <script>
+
+      function addMainInfo(){
+         var brandName = document.getElementById("brandName").value;
+         var mainTitle = document.getElementById("mainTitle").value;
+         var mainDesc = document.getElementById("mainDesc").value;
+
+         if((brandName && mainTitle && mainDesc) !== ""){
+            document.getElementById("alert").style.color="green";
+            document.getElementById("alert").innerHTML = "Correct";
+
+            document.getElementById("finalCode").innerHTML = document.getElementById("finalCode").innerHTML + '$_BRAND = " - ' + brandName + '";' + '<br>' + 'if($_URI == '+'"/"'+'){ <br> $_TITLE = "' + mainTitle + '"' +'; <br> $_DESC = "'+ mainDesc +'"; <br> }';
+         }else {
+            document.getElementById("alert").style.color="red";
+            document.getElementById("alert").innerHTML = "FILL ALL THE INPUTS!!!";
+         }
+      }
+
+      function clearInputValue(){
+         document.getElementById("anotherWebsiteUrl").value ="";
+         document.getElementById("anotherWebsiteTitle").value ="";
+         document.getElementById("anotherWebsiteDesc").value ="";
+      }
+      
+      function addAnotherWebsite(){
+         var anotherWebsiteUrl = document.getElementById("anotherWebsiteUrl").value;
+         var anotherWebsiteTitle = document.getElementById("anotherWebsiteTitle").value;
+         var anotherWebsiteDesc = document.getElementById("anotherWebsiteDesc").value;
+         var anotherWebsiteElse = 'elseif($_URI == "' + anotherWebsiteUrl + '"' + '){ <br> $_TITLE = "' + anotherWebsiteTitle + '"' + '; <br> $_DESC = "'+ anotherWebsiteDesc + '"'+ "; <br> }";
+
+         document.getElementById("finalCode").innerHTML = document.getElementById("finalCode").innerHTML + anotherWebsiteElse;
+
+         clearInputValue();
+      }
+     
+      
+      function addGAcode(){
+         var GAcode = document.getElementById("GAcode").value;
+         var gaScript = '$_GA = "' + '<br>' + '&lt;' +'!-- Global site tag (gtag.js) - Google Analytics --> <br> '+ '&lt;' + "script async src="+"'" + "https://www.googletagmanager.com/gtag/js?id="+ GAcode + "'" + '>' + '&lt;/' +'script>'+ '<br>' + '&lt;' +"script> window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag("+ "'" +"js"+"'" + ", new Date()); gtag("+ "'"+ "config"+"',"+"'"+GAcode+"'"+");" + "&lt;/"+"script>"+'";';
+         document.getElementById("gaDiv").innerHTML = document.getElementById("gaDiv").innerHTML + gaScript;
+      }
+
+      function addGSCcode(){
+         var GSCcode = document.getElementById("GSCcode").value;
+         var GSCscriptHead = '$_GSC_HEAD = " <br>' + '&lt;'+'!-- Google Tag Manager --> <br> ' + '&lt;' + "script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'" + "gtm.start"+"'"+ ": new Date().getTime(),event:"+"'"+"gtm.js"+"'"+"});var f=d.getElementsByTagName(s)[0], j=d.createElement(s),dl=l!="+"'"+"dataLayer"+"'"+"?"+"'"+"&l="+"'"+"+l:"+"''"+";j.async=true;j.src= "+"'"+"https://www.googletagmanager.com/gtm.js?id="+"'"+"+i+dl;f.parentNode.insertBefore(j,f); })(window,document,"+"'"+"script"+"'"+","+"'"+"dataLayer"+"'"+","+"'"+GSCcode+"'"+");"+"&lt;"+'/script> <br> '+'&lt;'+'!-- End Google Tag Manager --> ";<br> <br>';
+         var GSCscriptBody =  "$_GSC_BODY = ' <br>" + '&lt;' +'!-- Google Tag Manager (noscript) --> <br>'+'&lt;'+ 'noscript>'+'&lt;'+'iframe src="https://www.googletagmanager.com/ns.html?id='+GSCcode+'" height="0" width="0" style="display:none;visibility:hidden">'+'&lt;'+'/iframe>'+'&lt;'+'/noscript> <br>' +'&lt;'+'!-- End Google Tag Manager (noscript) --> '+"';";
+         document.getElementById("GSCdiv").innerHTML = document.getElementById("GSCdiv").innerHTML + GSCscriptHead + GSCscriptBody;
+      }
+
+      function addJSONcode(){
+         var JSONcode = document.getElementById("JSONcode").value;
+         document.getElementById("JSONdiv").innerHTML = document.getElementById("JSONdiv").innerHTML + JSONcode;
+      }
+   </script>
+</body>
+</html>

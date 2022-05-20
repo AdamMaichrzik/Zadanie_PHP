@@ -1,12 +1,15 @@
 <?php
 	session_start();
+  ini_set('display_errors', 1);
+  ini_set('display_startup_errors', 1);
+  error_reporting(E_ALL);
   include "../../content/functions/PHP/getCompanyInfo.php";
 
   $companyInfoGoogleMaps = $companyPostalCode.$companyCityName.$companyStreet;
 ?>
 <html lang="pl">
   <head>
-    <?php require_once "header.php"; ?>
+    <?php require_once "../../header.php" ?>
    <title>PickBox - Contact page</title>
    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.0.3/css/font-awesome.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />

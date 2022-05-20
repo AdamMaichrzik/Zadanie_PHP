@@ -1,5 +1,5 @@
 <?php
-require_once "connect.php";
+require_once "../../../connect.php";
 //create connection
 $connect= new mysqli($host, $db_user, $db_password, $db_name);
 
@@ -12,11 +12,7 @@ $url_components = parse_url($link);
 parse_str($url_components['query'], $params);
 
 $test = $params['pageID'];
-//check connection
-if(mysqli_connect_errno($connect))
-{
-   echo 'Failed to connect to database: '.mysqli_connect_error();
-}
+
 $pageTitle = isset($_POST['pageTitle']) ? $_POST['pageTitle'] : '';
 $pageTitleSEO = isset($_POST['pageTitleSEO']) ? $_POST['pageTitleSEO'] : '';
 $pageDesc = isset($_POST['pageDesc']) ? $_POST['pageDesc'] : '';

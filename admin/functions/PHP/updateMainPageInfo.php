@@ -1,14 +1,8 @@
 <?php
-require_once "connect.php";
+require_once "../../../connect.php";
 //create connection
 $connect= new mysqli($host, $db_user, $db_password, $db_name);
 
-
-//check connection
-if(mysqli_connect_errno($connect))
-{
-   echo 'Failed to connect to database: '.mysqli_connect_error();
-}
 $mainHeader = isset($_POST['mainHeader']) ? $_POST['mainHeader'] : '';
 $secondHeader = isset($_POST['secondHeader']) ? $_POST['secondHeader'] : '';
 $firstPartHeader = isset($_POST['firstPartHeader']) ? $_POST['firstPartHeader'] : '';

@@ -11,7 +11,7 @@
 ?>
 <html lang="pl">
   <head>
-    <?php require_once "header.php"; ?>
+    <?php require_once "../../header.php"; ?>
     <title>PickBox - admin panel</title>
     <link rel="stylesheet" href="../../style.css" />
   </head>
@@ -27,7 +27,7 @@
         </div>
       </div>
     </div>
-    <?php require_once "footer.php" ?>
+    <?php require_once "../../footer.php" ?>
     <script type="text/javascript" src="../../admin/functions/JS/adminPanelNavbar.js"></script>
     <!-- Bootstrap scripts-->
     <script src="../../content/functions/JS/bootstrapScripts.js"></script>
